@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 18:34:12 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/20 17:13:20 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,8 @@ void	ft_set_env_value(t_env **env, const char *name, const char *value);
 void	ft_unset_env_value(t_env **env, const char *name);
 char	*ft_expand_variable(t_env *env, const char *input);
 
-
 /* execute.c */
+int	ft_execute(t_token *tokens, t_env *env);
+int	ft_execute_cmd(t_token *tokens, t_env *env);
 
 #endif

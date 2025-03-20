@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 15:54:52 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/20 16:21:08 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,6 @@ int	main(int argc, char	**argv, char	**envp)
 	ft_start_animation();
 	signal(SIGINT, ft_handle_sigint);
 	new_env = ft_init_env(envp);
-	//test env	
-	while (new_env)
-	{
-		printf("Env: %s=%s\n", new_env->name, new_env->value);
-		new_env = new_env->next;
-	}
-	// end of test
-	
 	while (1)
 	{
 		input = readline("minishell$ ");
@@ -77,15 +69,27 @@ int	main(int argc, char	**argv, char	**envp)
 		{
 			add_history(input);
 			lexer = ft_lexer(input);
-			// test of lexer
+			if (lexer && new_env)
+				ft_execute(lexer, new_env);
+			ft_free_tokens(lexer);
+			free(input);
+			input = NULL;
+		}
+	}
+	return (0);
+}
+/*// test of lexer
 			while (lexer)
 			{
 				printf("Token: %s Type: %d\n", lexer->value, lexer->type);
 				lexer = lexer->next;
 			}
 			ft_free_tokens(lexer);
-			// end of test
-		}
+			// end of test*/
+/*//test env	
+	while (new_env)
+	{
+		printf("Env: %s=%s\n", new_env->name, new_env->value);
+		new_env = new_env->next;
 	}
-	return (0);
-}
+	// end of tes*/

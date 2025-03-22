@@ -27,9 +27,9 @@ SRC_FILES = \
 	$(SRC_DIR)/lexer_utils.c \
 	$(SRC_DIR)/utils.c \
 	$(SRC_DIR)/environment.c \
-	$(SRC_DIR)/environment_utils.c \
 	$(SRC_DIR)/execute.c \
-	#$(SRC_DIR)/built_in.c
+	$(SRC_DIR)/built_in.c \
+	$(SRC_DIR)/built_in_utils.c
 	
 # Libft files
 LIBFT_SRC = \
@@ -39,6 +39,7 @@ LIBFT_SRC = \
 	$(LIBFT_DIR)/ft_strlen.c \
 	$(LIBFT_DIR)/ft_strdup.c \
 	$(LIBFT_DIR)/ft_strchr.c \
+	$(LIBFT_DIR)/ft_strlcpy.c \
 	$(LIBFT_DIR)/ft_strjoin.c
 
 

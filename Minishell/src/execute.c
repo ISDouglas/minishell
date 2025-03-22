@@ -6,16 +6,16 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/20 17:09:15 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/22 17:19:14 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static char **ft_env_to_array(t_env *env)
+static char	**ft_env_to_array(t_env *env)
 {
 	t_env	*current;
-	char	**envp;
+	char	**env_array;
 	int		i;
 
 	current = env;
@@ -25,25 +25,25 @@ static char **ft_env_to_array(t_env *env)
 		i++;
 		current = current->next;
 	}
-	envp = malloc(sizeof(char *) * (i + 1));
-	if (!envp)
+	env_array = malloc(sizeof(char *) * (i + 1));
+	if (!env_array)
 		return (NULL);
 	current = env;
 	i = 0;
 	while (current)
 	{
-		envp[i] = ft_strjoin(current->name, "=");
-		envp[i] = ft_strjoin(envp[i], current->value);
+		env_array[i] = ft_strjoin(current->name, "=");
+		env_array[i] = ft_strjoin(env_array[i], current->value);
 		current = current->next;
 		i++;
 	}
-	envp[i] = NULL;
-	return (envp);
+	env_array[i] = NULL;
+	return (env_array);
 }
 
-static void ft_free_array(char **paths)
+static void	ft_free_array(char **paths)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (paths[i])
@@ -52,7 +52,8 @@ static void ft_free_array(char **paths)
 		i++;
 	}
 	free(paths);
-}	
+}
+
 static char	*ft_get_path_from_env(t_env *env)
 {
 	while (env)
@@ -99,7 +100,7 @@ static char	*ft_get_path(char *cmd, t_env *env)
 int	ft_execute_cmd(t_token *tokens, t_env *env)
 {
 	char	*path;
-	char	**envp;
+	char	**env_array;
 	pid_t	pid;
 	t_token	*current;
 	int		i;
@@ -107,41 +108,44 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 
 	i = 0;
 	current = tokens;
-	envp = ft_env_to_array(env);
-	path = ft_get_path(tokens->value, env);
-	if (!path)
+	env_array = ft_env_to_array(env);
+	if (!ft_isbuilt_in(tokens->value, tokens, env))
 	{
-		perror("Command not found");
-		return (127);
+		path = ft_get_path(tokens->value, env);
+		if (!path)
+		{
+			perror("Command not found");
+			return (127);
+		}
+		while (current && current->type == WORD)
+		{
+			i++;
+			current = current->next;
+		}
+		cmd = malloc(sizeof(char *) * (i + 1));
+		if (!cmd)
+			return (1);
+		i = 0;
+		while (tokens && tokens->type == WORD)
+		{
+			cmd[i++] = strdup(tokens->value);
+			tokens = tokens->next;
+		}
+		cmd[i] = NULL;
+		pid = fork();
+		if (pid == 0)
+		{
+			execve(path, cmd, env_array);
+			perror("execve");
+			exit(1);
+		}
+		else if (pid < 0)
+			perror("fork");
+		wait(NULL);
+		free(path);
+		ft_free_array(env_array);
+		ft_free_array(cmd);
 	}
-	while (current && current->type == WORD)
-	{
-		i++;
-		current = current->next;
-	}
-	cmd = malloc(sizeof(char *) * (i + 1));
-	if (!cmd)
-		return (1);
-	i = 0;
-	while (tokens && tokens->type == WORD)
-	{
-		cmd[i++] = strdup(tokens->value);
-		tokens = tokens->next;
-	}
-	cmd[i] = NULL;
-	pid = fork();
-	if (pid == 0)
-	{
-		execve(path, cmd, envp);
-		perror("execve");
-		exit(1);
-	}
-	else if (pid < 0)
-		perror("fork");
-	wait(NULL);
-	free(path);
-	ft_free_array(envp);
-	ft_free_array(cmd);
 	return (0);
 }
 
@@ -152,7 +156,6 @@ int	ft_execute(t_token *tokens, t_env *env)
 	current = tokens;
 	if (!current)
 		return (1);
-	//ft_execute_builtin(current, env);
 	while (current)
 	{
 		if (current->type == WORD)

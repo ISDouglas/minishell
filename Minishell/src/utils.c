@@ -6,10 +6,9 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:57:41 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 11:21:29 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/22 17:19:44 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "minishell.h"
 
@@ -21,7 +20,7 @@ int	ft_isspace(int c)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])

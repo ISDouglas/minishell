@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:36:34 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 15:56:23 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/22 18:06:05 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ t_env	*ft_create_env_node(const char *name, const char *value)
 		return (NULL);
 	node->name = ft_strdup(name);
 	node->value = ft_strdup(value);
+	if (!node->name || !node->value)
+	{
+		free(node);
+		perror("node creation failed");
+		return (NULL);
+	}
 	node->next = NULL;
 	return (node);
 }

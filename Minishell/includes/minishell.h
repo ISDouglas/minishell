@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/20 17:13:20 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/22 17:59:40 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include <termios.h>
 # include <string.h>
 # include "../Libft/libft.h"
+//# include <wait.h>
 
 /*****************************************************************************
  *  
@@ -100,14 +101,20 @@ t_env	*ft_create_env_node(const char *name, const char *value);
 t_env	*ft_init_env(char **envp);
 void	ft_free_env(t_env *env);
 
-/* environment_utils.c */
-char	*ft_get_env_value(t_env *env, const char *name);
-void	ft_set_env_value(t_env **env, const char *name, const char *value);
-void	ft_unset_env_value(t_env **env, const char *name);
-char	*ft_expand_variable(t_env *env, const char *input);
-
 /* execute.c */
 int	ft_execute(t_token *tokens, t_env *env);
 int	ft_execute_cmd(t_token *tokens, t_env *env);
+
+/* built_in*/
+int		ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env);
+int		ft_echo(t_token *tokens);
+int		ft_cd(t_token *tokens);
+int		ft_pwd(void);
+
+/* built_in_utils.c */
+
+int		ft_get_env(t_env *env);
+int		ft_unset(t_token *tokens, t_env *env);
+int		ft_export(t_token *tokens, t_env **env);
 
 #endif

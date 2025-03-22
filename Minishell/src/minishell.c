@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/20 16:21:08 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/22 17:27:39 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	ft_handle_sigint(int sig)
 	rl_redisplay();
 }
 
-int	main(int argc, char	**argv, char	**envp)
+int	main(int argc, char	**argv, char **envp)
 {
 	char	*input;
 	t_token	*lexer;
@@ -56,7 +56,6 @@ int	main(int argc, char	**argv, char	**envp)
 
 	(void)argc;
 	(void)argv;
-	(void)envp;
 	ft_start_animation();
 	signal(SIGINT, ft_handle_sigint);
 	new_env = ft_init_env(envp);
@@ -78,18 +77,3 @@ int	main(int argc, char	**argv, char	**envp)
 	}
 	return (0);
 }
-/*// test of lexer
-			while (lexer)
-			{
-				printf("Token: %s Type: %d\n", lexer->value, lexer->type);
-				lexer = lexer->next;
-			}
-			ft_free_tokens(lexer);
-			// end of test*/
-/*//test env	
-	while (new_env)
-	{
-		printf("Env: %s=%s\n", new_env->name, new_env->value);
-		new_env = new_env->next;
-	}
-	// end of tes*/

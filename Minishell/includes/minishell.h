@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/22 17:59:40 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/24 10:04:18 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ typedef enum	e_token_type
 	REDIRECT_OUT,
 	HEREDOC,
 	APPEND,
-	ENV_VAR
+	ENV_VAR,
+	AND,
+	OR,
 }	t_token_type;
 
 typedef struct	s_token
@@ -104,6 +106,13 @@ void	ft_free_env(t_env *env);
 /* execute.c */
 int	ft_execute(t_token *tokens, t_env *env);
 int	ft_execute_cmd(t_token *tokens, t_env *env);
+int	ft_count_operators(t_token *tokens, int *pipe, int *redirect);
+
+/* execute_utils.c */
+char	**ft_env_to_array(t_env *env);
+void	ft_free_array(char **paths);
+char	*ft_get_path_from_env(t_env *env);
+char	*ft_get_path(char *cmd, t_env *env);
 
 /* built_in*/
 int		ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env);

@@ -6,95 +6,29 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/22 17:19:14 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/24 10:27:42 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static char	**ft_env_to_array(t_env *env)
+int	ft_count_operators(t_token *tokens, int *pipe, int *redirect)
 {
-	t_env	*current;
-	char	**env_array;
-	int		i;
-
-	current = env;
-	i = 0;
-	while (current)
+	*pipe = 0;
+	*redirect = 0;
+	
+	while (tokens)
 	{
-		i++;
-		current = current->next;
+		if (tokens->type == PIPE)
+			(*pipe)++;
+		else if (tokens->type == REDIRECT_IN || tokens->type == REDIRECT_OUT ||
+				tokens->type == HEREDOC || tokens->type == APPEND)
+			(*redirect)++;
+		tokens = tokens->next;
 	}
-	env_array = malloc(sizeof(char *) * (i + 1));
-	if (!env_array)
-		return (NULL);
-	current = env;
-	i = 0;
-	while (current)
-	{
-		env_array[i] = ft_strjoin(current->name, "=");
-		env_array[i] = ft_strjoin(env_array[i], current->value);
-		current = current->next;
-		i++;
-	}
-	env_array[i] = NULL;
-	return (env_array);
-}
-
-static void	ft_free_array(char **paths)
-{
-	int	i;
-
-	i = 0;
-	while (paths[i])
-	{
-		free(paths[i]);
-		i++;
-	}
-	free(paths);
-}
-
-static char	*ft_get_path_from_env(t_env *env)
-{
-	while (env)
-	{
-		if (ft_strncmp(env->name, "PATH", 4) == 0)
-			return (env->value);
-		env = env->next;
-	}
-	return (NULL);
-}
-
-static char	*ft_get_path(char *cmd, t_env *env)
-{
-	char	*path;
-	char	**dirs;
-	char	*cmd_path;
-	char	*temp;
-	int		i;
-
-	path = ft_get_path_from_env(env);
-	if (!path)
-		return (NULL);
-	dirs = ft_split(path, ':');
-	if (!dirs)
-		return (NULL);
-	i = 0;
-	while (dirs[i])
-	{
-		temp = ft_strjoin(dirs[i], "/");
-		cmd_path = ft_strjoin(temp, cmd);
-		free(temp);
-		if (access(cmd_path, F_OK) == 0)
-		{
-			ft_free_array(dirs);
-			return (cmd_path);
-		}
-		free(cmd_path);
-		i++;
-	}
-	ft_free_array(dirs);
-	return (NULL);
+	if ((*pipe > 0) || (*redirect > 0))
+		return (1);
+	return (0);
 }
 
 int	ft_execute_cmd(t_token *tokens, t_env *env)
@@ -152,13 +86,16 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 int	ft_execute(t_token *tokens, t_env *env)
 {
 	t_token	*current;
+	int	nb_pipe;
+	int	nb_redirect;
 
 	current = tokens;
 	if (!current)
 		return (1);
 	while (current)
 	{
-		if (current->type == WORD)
+		if (current->type == WORD &&
+			!ft_count_operators(tokens, &nb_pipe, &nb_redirect))
 			return (ft_execute_cmd(current, env));
 		current = current->next;
 	}

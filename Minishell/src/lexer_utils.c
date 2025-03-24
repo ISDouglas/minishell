@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 11:02:33 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 12:33:10 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/24 10:24:47 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,11 @@ void	ft_add_token(t_token **tokens, t_token *new_token)
 
 t_token_type	ft_get_operator_type(char c, char next_c)
 {
-	if (c == '|')
+	if (c == '&' && next_c == '&')
+		return (AND);
+	if (c == '|' && next_c == '|')
+		return (OR);
+		if (c == '|')
 		return (PIPE);
 	if (c == '<' && next_c == '<')
 		return (HEREDOC);

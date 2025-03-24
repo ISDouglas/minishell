@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 08:47:36 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/19 15:10:37 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/24 10:19:36 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ static void	ft_handle_operator(const char *input, size_t *i, t_token **tokens)
 	op[0] = input[*i];
 	op[1] = '\0';
 	op[2] = '\0';
-	if ((input[*i] == '<' || input[*i] == '>') && input[*i + 1] == input[*i])
+	if ((input[*i] == '<' || input[*i] == '>' || input[*i] == '&'
+		|| input[*i] == '|') && input[*i + 1] == input[*i])
 	{
 		op[1] = input[*i];
 		(*i)++;
@@ -105,7 +106,7 @@ t_token	*ft_lexer(const char *input)
 	{
 		if (ft_isspace(input[i]))
 			i++;
-		else if (ft_strchr("|<>", input[i]))
+		else if (ft_strchr("|<>&", input[i]))
 			ft_handle_operator(input, &i, &tokens);
 		else if (input[i] == '\'' || input[i] == '"')
 			ft_handle_quote(input, &i, &tokens);

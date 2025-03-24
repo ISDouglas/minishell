@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/22 17:27:39 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/24 10:25:56 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,3 +77,11 @@ int	main(int argc, char	**argv, char **envp)
 	}
 	return (0);
 }
+
+/*
+while (lexer)
+			{
+				printf("lexer->type = %d\n", lexer->type);
+				printf("lexer->value = %s\n", lexer->value);
+				lexer = lexer->next;
+			}*/

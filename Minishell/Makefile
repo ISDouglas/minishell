@@ -28,6 +28,7 @@ SRC_FILES = \
 	$(SRC_DIR)/utils.c \
 	$(SRC_DIR)/environment.c \
 	$(SRC_DIR)/execute.c \
+	$(SRC_DIR)/execute_utils.c \
 	$(SRC_DIR)/built_in.c \
 	$(SRC_DIR)/built_in_utils.c
 	

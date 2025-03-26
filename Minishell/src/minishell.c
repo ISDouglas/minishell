@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/24 10:25:56 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 16:37:58 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,14 @@ int	main(int argc, char	**argv, char **envp)
 	char	*input;
 	t_token	*lexer;
 	t_env	*new_env;
+	int		status;
 
 	(void)argc;
 	(void)argv;
+	status = 0;
 	ft_start_animation();
 	signal(SIGINT, ft_handle_sigint);
+	signal(SIGQUIT, SIG_IGN);
 	new_env = ft_init_env(envp);
 	while (1)
 	{
@@ -69,11 +72,12 @@ int	main(int argc, char	**argv, char **envp)
 			add_history(input);
 			lexer = ft_lexer(input);
 			if (lexer && new_env)
-				ft_execute(lexer, new_env);
+				ft_execute(lexer, new_env, &status);
 			ft_free_tokens(lexer);
 			free(input);
 			input = NULL;
 		}
+		printf("status in main: %d\n", status);
 	}
 	return (0);
 }

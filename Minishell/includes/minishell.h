@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/26 09:43:23 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 16:32:06 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef enum	e_token_type
 	ENV_VAR,
 	AND,
 	OR,
+	WILDCARDS
 }	t_token_type;
 
 typedef struct	s_token
@@ -76,13 +77,6 @@ typedef struct s_env
 #if __APPLE__
 extern int rl_replace_line(const char *text, int i); 
 #endif
-/******************************************************************************
- *  
- *  					MINISHELL global variables for signal handling
- *  
- *****************************************************************************/
-
-extern volatile sig_atomic_t g_signal;
 
 /*****************************************************************************
  *  
@@ -111,8 +105,8 @@ t_env	*ft_init_env(char **envp);
 void	ft_free_env(t_env *env);
 
 /* execute.c */
-int	ft_execute(t_token *tokens, t_env *env);
-int	ft_execute_cmd(t_token *tokens, t_env *env);
+int	ft_execute(t_token *tokens, t_env *env, int *status);
+int	ft_execute_cmd(t_token *tokens, t_env *env, int *status);
 int	ft_count_operators(t_token *tokens, int *pipe, int *redirect);
 
 /* execute_utils.c */
@@ -129,7 +123,7 @@ int		ft_pwd(void);
 
 /* built_in_utils.c */
 
-int		ft_get_env(t_env *env);
+int		ft_get_env(t_token *tokens, t_env *env);
 int		ft_unset(t_token *tokens, t_env *env);
 int		ft_export(t_token *tokens, t_env **env);
 

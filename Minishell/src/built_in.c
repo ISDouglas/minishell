@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:30:21 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/26 09:51:24 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 13:48:12 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ int	ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env)
 	else if (ft_strncmp(cmd, "unset", 5) == 0)
 		return (ft_unset(tokens, env));
 	else if (ft_strncmp(cmd, "env", 3) == 0)
-		return (ft_get_env(env));
+		return (ft_get_env(tokens, env));
 	else if (ft_strncmp(cmd, "exit", 4) == 0)
 		exit(0);
 	return (FAILURE);

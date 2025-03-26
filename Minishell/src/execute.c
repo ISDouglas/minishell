@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/26 09:43:59 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 16:36:33 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_count_operators(t_token *tokens, int *pipe, int *redirect)
 	return (0);
 }
 
-int	ft_execute_cmd(t_token *tokens, t_env *env)
+int	ft_execute_cmd(t_token *tokens, t_env *env, int *status)
 {
 	char	*path;
 	char	**env_array;
@@ -49,7 +49,8 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 		if (!path)
 		{
 			perror("Command not found");
-			return (127);
+			*status = 127;
+			return (*status);
 		}
 		while (current && current->type == WORD)
 		{
@@ -75,7 +76,9 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 		}
 		else if (pid < 0)
 			perror("fork");
-		wait(NULL);
+		waitpid(pid, status, 0);
+		*status = (*status >> 8) & 0xFF;
+		printf("status: %d\n", *status);
 		free(path);
 		ft_free_array(env_array);
 		ft_free_array(cmd);
@@ -83,7 +86,7 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 	return (0);
 }
 
-int	ft_execute(t_token *tokens, t_env *env)
+int	ft_execute(t_token *tokens, t_env *env, int *status)
 {
 	t_token	*current;
 	int	nb_pipe;
@@ -96,7 +99,7 @@ int	ft_execute(t_token *tokens, t_env *env)
 	{
 		if (current->type == WORD &&
 			!ft_count_operators(tokens, &nb_pipe, &nb_redirect))
-			return (ft_execute_cmd(current, env));
+			return (ft_execute_cmd(current, env, status));
 		current = current->next;
 	}
 	return (0);

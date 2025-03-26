@@ -6,27 +6,42 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 12:31:23 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/26 10:11:51 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 14:19:46 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int	ft_get_env(t_env *env)
+int	ft_get_env(t_token *tokens, t_env *env)
 {
 	t_env	*current;
 
+	
 	current = env;
-	while (current)
+	if (tokens->next == NULL)
 	{
-		if (current->value)
+		while (current)
 		{
-			write(1, current->name, ft_strlen(current->name));
-			write(1, "=", 1);
-			write(1, current->value, ft_strlen(current->value));
-			write(1, "\n", 1);
+			if (current->value)
+			{
+				write(1, current->name, ft_strlen(current->name));
+				write(1, "=", 1);
+				write(1, current->value, ft_strlen(current->value));
+				write(1, "\n", 1);
+			}
+			current = current->next;
 		}
-		current = current->next;
+	}
+	else if (tokens->next->type == ENV_VAR)
+		{
+		while (current)
+		{
+			if (ft_strcmp(current->name, &tokens->next->value[1]) == 0)
+			{
+				write(1, current->value, ft_strlen(current->value));
+			}
+			current = current->next;
+		}
 	}
 	return (SUCCESS);
 }
@@ -81,7 +96,7 @@ int	ft_export(t_token *tokens, t_env **env)
 	printf("ptr env %p\n", env);
 	if (!tokens->next)
 	{
-		ft_get_env(*env);
+		ft_get_env(tokens, *env);
 		return (SUCCESS);
 	}
 	tokens = tokens->next;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/24 10:27:42 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 09:43:59 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_execute_cmd(t_token *tokens, t_env *env)
 	i = 0;
 	current = tokens;
 	env_array = ft_env_to_array(env);
-	if (!ft_isbuilt_in(tokens->value, tokens, env))
+	if (ft_isbuilt_in(tokens->value, tokens, env) == FAILURE)
 	{
 		path = ft_get_path(tokens->value, env);
 		if (!path)

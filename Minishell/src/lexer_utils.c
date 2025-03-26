@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lexer_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 11:02:33 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/24 10:24:47 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 09:42:11 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ t_token_type	ft_get_operator_type(char c, char next_c)
 		return (AND);
 	if (c == '|' && next_c == '|')
 		return (OR);
-		if (c == '|')
+	if (c == '|')
 		return (PIPE);
 	if (c == '<' && next_c == '<')
 		return (HEREDOC);

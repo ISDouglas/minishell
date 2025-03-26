@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   built_in.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:30:21 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/22 18:07:01 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 09:51:24 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_pwd(void)
 	}
 	else
 		perror("pwd");
-	return (1);
+	return (SUCCESS);
 }
 
 int	ft_echo(t_token *tokens)
@@ -34,7 +34,7 @@ int	ft_echo(t_token *tokens)
 	if (tokens->next == NULL)
 	{
 		write(1, "\n", 1);
-		return (1);
+		return (SUCCESS);
 	}
 	if (tokens->next && ft_strncmp(tokens->next->value, "-n", 2) == 0)
 	{
@@ -54,7 +54,7 @@ int	ft_echo(t_token *tokens)
 		write(1, "\n", 1);
 	else
 		write(1, "%\n", 2);
-	return (1);
+	return (SUCCESS);
 }
 
 int	ft_cd(t_token *tokens)
@@ -64,20 +64,20 @@ int	ft_cd(t_token *tokens)
 	if (tokens->next == NULL)
 	{
 		chdir(getenv("HOME"));
-		return (1);
+		return (SUCCESS);
 	}
 	if (strcmp(tokens->next->value, "~") == 0)
 	{
 		chdir(getenv("OLDPWD"));
-		return (1);
+		return (SUCCESS);
 	}
 	path = tokens->next->value;
 	if (chdir(path) != 0)
 	{
 		perror("cd");
-		return (1);
+		return (FAILURE);
 	}
-	return (1);
+	return (SUCCESS);
 }
 
 int	ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env)
@@ -96,5 +96,5 @@ int	ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env)
 		return (ft_get_env(env));
 	else if (ft_strncmp(cmd, "exit", 4) == 0)
 		exit(0);
-	return (0);
+	return (FAILURE);
 }

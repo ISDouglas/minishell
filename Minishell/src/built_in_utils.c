@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   built_in_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 12:31:23 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/22 18:15:43 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/26 10:11:51 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_get_env(t_env *env)
 		}
 		current = current->next;
 	}
-	return (1);
+	return (SUCCESS);
 }
 
 int	ft_unset(t_token *tokens, t_env *env)
@@ -49,12 +49,12 @@ int	ft_unset(t_token *tokens, t_env *env)
 			free(current->name);
 			free(current->value);
 			free(current);
-			return (1);
+			return (SUCCESS);
 		}
 		prev = current;
 		current = current->next;
 	}
-	return (1);
+	return (FAILURE);
 }
 char *ft_extract_name(char *str)
 {
@@ -78,10 +78,11 @@ int	ft_export(t_token *tokens, t_env **env)
 	char	*name;
 	char	*value;
 	
+	printf("ptr env %p\n", env);
 	if (!tokens->next)
 	{
 		ft_get_env(*env);
-		return (1);
+		return (SUCCESS);
 	}
 	tokens = tokens->next;
 	name = ft_extract_name(tokens->value);
@@ -99,7 +100,7 @@ int	ft_export(t_token *tokens, t_env **env)
 			free(current->value);
 			current->value = ft_strdup(value);
 			free(name);
-			return (1);
+			return (SUCCESS);
 		}
 		current = current->next;
 	}
@@ -108,9 +109,11 @@ int	ft_export(t_token *tokens, t_env **env)
 	if (!new_node)
 	{
 		perror("Failed to create new env node");
-		return (1);
+		return (FAILURE);
 	}
 	new_node->next = *env;
 	*env = new_node;
-	return (1);
+	printf("ptr env %p\n", env);
+	printf("fisrt env %s\n", env[1]->name);
+	return (SUCCESS);
 }

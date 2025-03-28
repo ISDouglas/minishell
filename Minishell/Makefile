@@ -30,7 +30,10 @@ SRC_FILES = \
 	$(SRC_DIR)/execute.c \
 	$(SRC_DIR)/execute_utils.c \
 	$(SRC_DIR)/built_in.c \
-	$(SRC_DIR)/built_in_utils.c
+	$(SRC_DIR)/cd.c \
+	$(SRC_DIR)/echo.c \
+	$(SRC_DIR)/unset.c \
+	$(SRC_DIR)/export.c
 	
 # Libft files
 LIBFT_SRC = \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 09:48:01 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/24 09:49:21 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 09:31:21 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	**ft_env_to_array(t_env *env)
 	t_env	*current;
 	char	**env_array;
 	int		i;
+	char *tmp;
 
 	current = env;
 	i = 0;
@@ -32,8 +33,9 @@ char	**ft_env_to_array(t_env *env)
 	i = 0;
 	while (current)
 	{
-		env_array[i] = ft_strjoin(current->name, "=");
-		env_array[i] = ft_strjoin(env_array[i], current->value);
+		tmp = ft_strjoin(current->name, "=");
+		env_array[i] = ft_strjoin(tmp, current->value);
+		free(tmp);
 		current = current->next;
 		i++;
 	}

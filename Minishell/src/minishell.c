@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/27 11:28:45 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 09:57:40 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-volatile sig_atomic_t	g_exit_status = 0;
+int status;
 
 void	ft_start_animation(void)
 {
@@ -51,17 +51,23 @@ void	ft_handle_sigint(int sig)
 int	main(int argc, char	**argv, char **envp)
 {
 	char	*input;
-	t_token	*lexer;
-	t_env	*new_env;
+	//t_token	*lexer;
+	//t_env	*new_env;
 	int		status;
-
+	t_mini	mini;
+	
 	(void)argc;
 	(void)argv;
 	status = 0;
 	ft_start_animation();
 	signal(SIGINT, ft_handle_sigint);
 	signal(SIGQUIT, SIG_IGN);
-	new_env = ft_init_env(envp);
+	mini.env = malloc(sizeof(t_env));
+	ft_memset(mini.env, 0, sizeof(t_env));
+	mini.env = ft_init_env(envp);
+	mini.lexer = malloc(sizeof(t_token));
+	ft_memset(mini.lexer, 0, sizeof(t_token));
+	mini.array_env = NULL;
 	while (1)
 	{
 		input = readline("minishell$ ");
@@ -70,10 +76,10 @@ int	main(int argc, char	**argv, char **envp)
 		if (*input)
 		{
 			add_history(input);
-			lexer = ft_lexer(input);
-			if (lexer && new_env)
-				ft_execute(lexer, new_env, &status);
-			ft_free_tokens(lexer);
+			mini.lexer = ft_lexer(input);
+			if (mini.lexer && mini.env)
+				ft_execute(mini.lexer, mini.env, &status);
+			ft_free_tokens(mini.lexer);
 			free(input);
 			input = NULL;
 		}

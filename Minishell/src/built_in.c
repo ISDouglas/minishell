@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   built_in.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:30:21 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/27 18:00:25 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 09:36:40 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,37 +29,6 @@ int	ft_env(t_env *env)
 	}
 	return (SUCCESS);
 }
-
-/*int	ft_unset(t_token *tokens, t_env *env)
-{
-	t_env	*current;
-	t_env	*prev;
-
-	if (!tokens->next)
-	{
-		perror("unset: not enough arguments");
-		return (SUCCESS);
-	}
-	current = env;
-	prev = NULL;
-	while (current)
-	{
-		if (ft_strcmp(current->name, tokens->next->value) == 0)
-		{
-			if (prev)
-				prev->next = current->next;
-			else
-				env = current->next;
-			free(current->name);
-			free(current->value);
-			free(current);
-			return (SUCCESS);
-		}
-		prev = current;
-		current = current->next;
-	}
-	return (FAILURE);
-}*/
 
 int	ft_isbuilt_in(char *cmd, t_token *tokens, t_env *env)
 {

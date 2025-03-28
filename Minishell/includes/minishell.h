@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/27 18:00:49 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 09:58:30 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # include <string.h>
 # include "../Libft/libft.h"
 # include <limits.h>
-//# include <wait.h>
+# include <wait.h>
 
 /*****************************************************************************
  *  
@@ -69,6 +69,16 @@ typedef struct s_env
 	char			*value;
 	struct s_env	*next;
 } 					t_env;
+
+typedef struct s_mini
+{
+	t_token *lexer;
+	t_env	*env;
+	char 	**array_env;
+
+}			t_mini;
+
+extern int status;
 
 /******************************************************************************
  *  

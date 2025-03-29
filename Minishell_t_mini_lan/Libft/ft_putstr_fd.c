@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/16 12:21:51 by layang            #+#    #+#             */
-/*   Updated: 2025/03/16 12:58:22 by layang           ###   ########.fr       */
+/*   Created: 2024/11/11 11:37:43 by nimorel           #+#    #+#             */
+/*   Updated: 2024/11/11 11:46:03 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <signal.h>
-# include <readline/readline.h>
-# include <readline/history.h>
-# include <termios.h>
+void	ft_putstr_fd(char *s, int fd)
+{
+	write(fd, s, ft_strlen(s));
+}
+/*int	main(void)
+{
+	char	str[5] = "hello";
 
+	ft_putstr_fd(str, 1);
+	return (0);
 
-#endif
+}*/

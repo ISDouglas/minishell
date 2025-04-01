@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cd.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 17:30:08 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/30 09:21:47 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/01 17:16:49 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	ft_pwd(void)
 
 static char	*ft_cd_path(t_token *tokens, t_env *env)
 {
-	if (!tokens->next || strcmp(tokens->next->value, "~") == 0)
+	if (!tokens->next || ft_strcmp(tokens->next->value, "~") == 0)
 		return (ft_getenv(env, "HOME"));
-	if (strcmp(tokens->next->value, "-") == 0)
+	if (ft_strcmp(tokens->next->value, "-") == 0)
 		return (ft_getenv(env, "OLDPWD"));
 	return (tokens->next->value);
 }

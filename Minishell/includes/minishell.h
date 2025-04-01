@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/28 09:58:30 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 10:32:09 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,8 +116,8 @@ t_env	*ft_init_env(char **envp);
 void	ft_free_env(t_env *env);
 
 /* execute.c */
-int	ft_execute(t_token *tokens, t_env *env, int *status);
-int	ft_execute_cmd(t_token *tokens, t_env *env, int *status);
+int	ft_execute(t_mini *mini);
+int	ft_execute_cmd(t_token *tokens, t_mini *mini);
 int	ft_count_operators(t_token *tokens, int *pipe, int *redirect);
 
 /* execute_utils.c */
@@ -143,5 +143,7 @@ int		ft_echo(t_token *tokens);
 
 /* unset */
 int		ft_unset(t_token *tokens, t_env **env);
+
+void	ft_free_mini(t_mini *all);
 
 #endif

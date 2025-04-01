@@ -3,16 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/28 09:57:40 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 10:48:14 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
 int status;
+
+void	ft_free_mini(t_mini *all)
+{
+	if (all->lexer)
+		ft_free_tokens(all->lexer);
+	if (all->env)
+		ft_free_env(all->env);
+	if (all->array_env)
+		ft_free_array(all->array_env);
+}
 
 void	ft_start_animation(void)
 {
@@ -53,7 +63,6 @@ int	main(int argc, char	**argv, char **envp)
 	char	*input;
 	//t_token	*lexer;
 	//t_env	*new_env;
-	int		status;
 	t_mini	mini;
 	
 	(void)argc;
@@ -78,12 +87,13 @@ int	main(int argc, char	**argv, char **envp)
 			add_history(input);
 			mini.lexer = ft_lexer(input);
 			if (mini.lexer && mini.env)
-				ft_execute(mini.lexer, mini.env, &status);
+				ft_execute(&mini);
 			ft_free_tokens(mini.lexer);
 			free(input);
 			input = NULL;
 		}
 	}
+	clear_history();
 	return (0);
 }
 

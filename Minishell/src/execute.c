@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
+/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/28 09:32:10 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/03/28 10:50:12 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,9 @@ int	ft_count_operators(t_token *tokens, int *pipe, int *redirect)
 	return (0);
 }
 
-int	ft_execute_cmd(t_token *tokens, t_env *env, int *status)
+int	ft_execute_cmd(t_token *tokens, t_mini *mini)
 {
 	char	*path;
-	char	**env_array;
 	pid_t	pid;
 	t_token	*current;
 	int		i;
@@ -42,15 +41,16 @@ int	ft_execute_cmd(t_token *tokens, t_env *env, int *status)
 
 	i = 0;
 	current = tokens;
-	env_array = ft_env_to_array(env);
-	if (ft_isbuilt_in(tokens->value, tokens, env) == FAILURE)
+	mini->array_env = ft_env_to_array(mini->env);
+	if (ft_isbuilt_in(tokens->value, tokens, mini->env) == FAILURE)
 	{
-		path = ft_get_path(tokens->value, env);
+		path = ft_get_path(tokens->value, mini->env);
 		if (!path)
 		{
 			perror("Command not found");
-			*status = 127;
-			return (*status);
+			status = 127;
+			ft_free_mini(mini);
+			exit(status);                          //free_mini() and exit(status)?
 		}
 		while (current && current->type == WORD)
 		{
@@ -70,36 +70,42 @@ int	ft_execute_cmd(t_token *tokens, t_env *env, int *status)
 		pid = fork();
 		if (pid == 0)
 		{
-			execve(path, cmd, env_array);
+			execve(path, cmd, mini->array_env);
 			perror("execve");
-			exit(1);
+			status  = 1;
+			ft_free_mini(mini);
+			exit(status);
 		}
 		else if (pid < 0)
+		{
 			perror("fork");
-		waitpid(pid, status, 0);
-		*status = (*status >> 8) & 0xFF;
-		printf("status: %d\n", *status);
+			status  = 1;
+			ft_free_mini(mini);
+			exit(status);
+		}
+		waitpid(pid, &status, 0);
+		status = (status >> 8) & 0xFF;
+		printf("status: %d\n", status);
 		free(path);
-		ft_free_array(env_array);
 		ft_free_array(cmd);
 	}
 	return (0);
 }
 
-int	ft_execute(t_token *tokens, t_env *env, int *status)
+int	ft_execute(t_mini *mini)
 {
 	t_token	*current;
 	int	nb_pipe;
 	int	nb_redirect;
 
-	current = tokens;
+	current = mini->lexer;
 	if (!current)
 		return (1);
 	while (current)
 	{
 		if (current->type == WORD &&
-			!ft_count_operators(tokens, &nb_pipe, &nb_redirect))
-			return (ft_execute_cmd(current, env, status));
+			!ft_count_operators(mini->lexer, &nb_pipe, &nb_redirect))
+			return (ft_execute_cmd(current, mini));
 		current = current->next;
 	}
 	return (0);

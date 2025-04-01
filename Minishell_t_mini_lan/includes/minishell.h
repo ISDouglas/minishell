@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/29 07:59:54 by layang           ###   ########.fr       */
+/*   Updated: 2025/03/29 14:59:09 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,6 +191,7 @@ void	ft_free_mini(t_mini *all);
 t_env	*ft_create_env_node(const char *name, const char *value);
 t_env	*ft_init_env(char **envp);
 void	ft_free_env(t_env *env);
+char	*ft_getenv(t_env *env, const char *name);
 
 /* execute.c */
 int	ft_execute(t_mini *mini);
@@ -216,7 +217,7 @@ int		ft_cd(t_token *tokens, t_env *env);
 int		ft_pwd(void);
 
 /* echo.c */
-int		ft_echo(t_token *tokens);
+int		ft_echo(t_token *tokens, t_env *env);
 
 /* unset */
 int		ft_unset(t_token *tokens, t_env **env);

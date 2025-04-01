@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   echo.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 17:33:18 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/29 07:53:48 by layang           ###   ########.fr       */
+/*   Updated: 2025/03/29 15:35:41 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_n_flag(t_token **tokens)
 	return (newline);
 }
 
-static void	ft_echo_process(t_token *tokens)
+static void	ft_echo_process(t_token *tokens, t_env *env)
 {
 	char	*env_value;
 
@@ -46,7 +46,7 @@ static void	ft_echo_process(t_token *tokens)
 				ft_putnbr_fd(status, 1);
 			else
 			{
-				env_value = getenv(tokens->value + 1);
+				env_value = ft_getenv(env, tokens->value + 1);
 				if (env_value)
 					write(1, env_value, ft_strlen(env_value));
 			}
@@ -57,13 +57,13 @@ static void	ft_echo_process(t_token *tokens)
 	}
 }
 
-int	ft_echo(t_token *tokens)
+int	ft_echo(t_token *tokens, t_env *env)
 {
 	int	newline;
 
 	tokens = tokens->next;
 	newline = ft_n_flag(&tokens);
-	ft_echo_process(tokens);
+	ft_echo_process(tokens, env);
 	if (newline)
 		write(1, "\n", 1);
 	return (SUCCESS);

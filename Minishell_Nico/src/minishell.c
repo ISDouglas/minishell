@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/30 09:23:18 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/05 15:07:38 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int status;
+int	g_status;
 
 void	ft_start_animation(void)
 {
@@ -47,6 +47,75 @@ void	ft_handle_sigint(int sig)
 	rl_replace_line("", 0);
 	rl_redisplay();
 }
+/*void	ft_readline(t_mini mini)
+{
+	char	*input;
+	
+	input = readline(PURPLEB "minishell" X YELLOW "$ " X);
+		if (!input)
+			return ;
+		if (*input)
+		{
+			add_history(input);
+			ft_lexer(input, &mini);
+			if (mini.lexer && mini.env)
+				if (ft_execute(&mini) == EXIT_CMD)
+				{
+					free(input);
+					input = NULL;
+					clear_history();
+					exit(g_status);
+				}
+			ft_free_tokens(mini.lexer);
+			mini.lexer = NULL;
+			free(input);
+			input = NULL;
+		}
+}*/
+int	main(int argc, char	**argv, char **envp)
+{
+	char	*input;
+	t_mini	mini;
+
+	(void)argc;
+	(void)argv;
+	g_status = 0;
+	ft_start_animation();
+	signal(SIGINT, ft_handle_sigint);
+	signal(SIGQUIT, SIG_IGN);
+	mini.env = ft_init_env(envp);
+	mini.lexer = NULL;
+	mini.array_env = NULL;
+	while (1)
+	{
+		//ft_readline(mini);
+		input = readline(PURPLEB "minishell" X YELLOW "$ " X);
+		if (!input)
+			break ;
+		if (*input)
+		{
+			add_history(input);
+			ft_lexer(input, &mini);
+			if (mini.lexer && mini.env)
+				if (ft_execute(&mini) == EXIT_CMD)
+				{
+					free(input);
+					input = NULL;
+					clear_history();
+					//printf("status in exit: %d\n", g_status);
+					exit(g_status);
+				}
+			ft_free_tokens(mini.lexer);
+			mini.lexer = NULL;
+			free(input);
+			input = NULL;
+		}
+		//
+	}
+	ft_free_mini(&mini);
+	clear_history();
+	return (0);
+}
 
 /* static void test_print_env(t_env *env)
 {
@@ -60,50 +129,6 @@ void	ft_handle_sigint(int sig)
 		tmp = tmp->next;
 	}
 } */
-
-int	main(int argc, char	**argv, char **envp)
-{
-	char	*input;
-	t_mini	mini;
-	
-	(void)argc;
-	(void)argv;
-	status = 0;
-	ft_start_animation();
-	signal(SIGINT, ft_handle_sigint);
-	signal(SIGQUIT, SIG_IGN);
-	mini.env = ft_init_env(envp);
-	mini.lexer = NULL;
-	mini.array_env = NULL;
-	while (1)
-	{
-		input = readline(PURPLEB "minishell" X YELLOW "$ " X);
-		if (!input)
-			break ;
-		if (*input)
-		{
-			add_history(input);
-			ft_lexer(input, &mini);
-			if (mini.lexer && mini.env)
-				if(ft_execute(&mini) == EXIT_CMD)
-				{
-					free(input);
-					input = NULL;
-					clear_history();
-					printf("status in exit: %d\n", status);
-					exit(status);
-				}
-			ft_free_tokens(mini.lexer);
-			mini.lexer = NULL;
-			free(input);
-			input = NULL;
-		}
-	}
-	ft_free_mini(&mini);
-	clear_history();
-	return (0);
-}
-
 /*
 while (lexer)
 			{

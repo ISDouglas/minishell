@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:36:34 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/29 14:54:16 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/05 13:54:37 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,50 @@ t_env	*ft_create_env_node(const char *name, const char *value)
 	return (node);
 }
 
+static t_env	*ft_init_env_process(t_env **head, t_env **current, char *envp)
+{
+	char	*equal_sign;
+	t_env	*new_node;
+
+	new_node = NULL;
+	equal_sign = ft_strchr(envp, '=');
+	if (!equal_sign)
+		return (NULL);
+	*equal_sign = '\0';
+	new_node = ft_create_env_node(envp, equal_sign + 1);
+	*equal_sign = '=';
+	if (!new_node)
+		return (NULL);
+	if (!*head)
+		*head = new_node;
+	else
+		(*current)->next = new_node;
+	*current = new_node;
+	return (new_node);
+}
+
 t_env	*ft_init_env(char **envp)
+{
+	t_env	*head;
+	t_env	*current;
+	int		i;
+
+	head = NULL;
+	current = NULL;
+	i = 0;
+	while (envp[i])
+	{
+		if (!ft_init_env_process(&head, &current, envp[i]))
+		{
+			ft_free_env(head);
+			return (NULL);
+		}
+		i++;
+	}
+	return (head);
+}
+
+/*t_env	*ft_init_env(char **envp)
 {
 	t_env	*head;
 	t_env	*current;
@@ -92,4 +135,4 @@ t_env	*ft_init_env(char **envp)
 		i++;
 	}
 	return (head);
-}
+}*/

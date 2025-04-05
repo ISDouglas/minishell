@@ -3,29 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   execute_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 09:48:01 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/28 10:14:48 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/05 13:08:03 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
+
+static char	*ft_join_process(char *name, char *value)
+{
+	char	*tmp;
+	char	*result;
+
+	if (!name || !value)
+		return (NULL);
+	tmp = ft_strjoin(name, "=");
+	if (!tmp)
+		return (NULL);
+	result = ft_strjoin(tmp, value);
+	free(tmp);
+	return (result);
+}
 
 char	**ft_env_to_array(t_env *env)
 {
 	t_env	*current;
 	char	**env_array;
 	int		i;
-	char *tmp;
 
 	current = env;
 	i = 0;
-	while (current)
-	{
-		i++;
+	while (current && ++i)
 		current = current->next;
-	}
 	env_array = malloc(sizeof(char *) * (i + 1));
 	if (!env_array)
 		return (NULL);
@@ -33,11 +44,8 @@ char	**ft_env_to_array(t_env *env)
 	i = 0;
 	while (current)
 	{
-		tmp = ft_strjoin(current->name, "=");
-		env_array[i] = ft_strjoin(tmp, current->value);
-		free(tmp);
+		env_array[i++] = ft_join_process(current->name, current->value);
 		current = current->next;
-		i++;
 	}
 	env_array[i] = NULL;
 	return (env_array);
@@ -88,10 +96,7 @@ char	*ft_get_path(char *cmd, t_env *env)
 		cmd_path = ft_strjoin(temp, cmd);
 		free(temp);
 		if (access(cmd_path, F_OK) == 0)
-		{
-			ft_free_array(dirs);
-			return (cmd_path);
-		}
+			return (ft_free_array(dirs), cmd_path);
 		free(cmd_path);
 		i++;
 	}

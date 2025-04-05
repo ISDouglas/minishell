@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 17:26:37 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/29 08:08:29 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/05 14:26:02 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_update_var(t_env *env, char *name, char *value)
 		}
 		current = current->next;
 	}
-	return (printf("update env: update %s failed\n", name), FAILURE);
+	return (FAILURE);
 }
 
 static int	ft_add_var(t_env **env, char *name, char *value)
@@ -55,7 +55,7 @@ static int	ft_add_var(t_env **env, char *name, char *value)
 	t_env	*current;
 
 	if (!value)
-		value = ft_strdup("");
+		return (SUCCESS);
 	new_node = ft_create_env_node(name, value);
 	if (!new_node)
 	{

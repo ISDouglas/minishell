@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:30:21 by nimorel           #+#    #+#             */
-/*   Updated: 2025/03/29 14:58:19 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/05 10:54:11 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_isbuilt_in(char *cmd, t_token *tokens, t_mini *mini)
 		return (ft_env(mini->env));
 	else if (ft_strncmp(cmd, "exit", 4) == 0)
 	{
-		status = 0;
+		g_status = 0;
 		return (EXIT_CMD);
 	}
 	return (NOT_BUILT_IN_CMD);

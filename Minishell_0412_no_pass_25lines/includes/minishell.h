@@ -133,7 +133,7 @@ extern int g_status;
  *  
  *****************************************************************************/
 #if __linux__
-	# include <wait.h>
+	o
 #endif
 #if __APPLE__
 	extern int rl_replace_line(const char *text, int i);

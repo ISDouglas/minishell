@@ -10814,3 +10814,1109 @@ token: exit, type: 0
 
 
 Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: export TOTO TATA
+
+**add lexer succeed:
+token: export, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: TOTO
+
+**get cmd: TATA
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+declare -x SYSTEMD_EXEC_PID="2476518"
+declare -x SSH_AUTH_SOCK="/run/user/101835/keyring/ssh"
+declare -x SESSION_MANAGER="local/c2r4p1.42perpignan.fr:@/tmp/.ICE-unix/2476496,unix/c2r4p1.42perpignan.fr:/tmp/.ICE-unix/2476496"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/1f5282a8_f0a3_48da_b607_de2ffaccb7cc"
+declare -x LANG="en_US.UTF-8"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/nimorel"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x GPG_AGENT_INFO="/run/user/101835/gnupg/S.gpg-agent:0:1"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x QT_IM_MODULE="ibus"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session19"
+declare -x USER="nimorel"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101835/bus"
+declare -x DOCKER_HOST="unix:///run/user/101835/docker.sock"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x GTK_IM_MODULE="ibus"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x QT_ACCESSIBILITY="1"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101835_Lbt1bv"
+declare -x LOGNAME="nimorel"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x GNOME_TERMINAL_SERVICE=":1.165"
+declare -x HOME="/home/nimorel"
+declare -x PATH="/home/nimorel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/nimorel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XMODIFIERS="@im=ibus"
+declare -x XDG_RUNTIME_DIR="/run/user/101835"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x SHELL="/bin/zsh"
+declare -x VTE_VERSION="6800"
+declare -x COLORTERM="truecolor"
+declare -x XAUTHORITY="/home/nimorel/.Xauthority"
+declare -x PWD="/home/nimorel/today/Minishell_0412_no_pass_25lines"
+declare -x XDG_SESSION_CLASS="user"
+declare -x TERM="xterm-256color"
+declare -x GDMSESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x SHLVL="1"
+declare -x OLDPWD="/home/nimorel/today"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x _="/home/nimorel/today/Minishell_0412_no_pass_25lines/./minishell"
+declare -x TOTO=""
+declare -x TATA=""
+   g_status **: 0
+************ ************ ************
+
+**get input: unsett TOTO TATA
+
+**add lexer succeed:
+token: unsett, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: unsett
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: unsett
+
+**get cmd: TOTO
+
+**get cmd: TATA
+   g_status **: 127
+************ ************ ************
+
+**get input: unset TOTO TATA
+
+**add lexer succeed:
+token: unset, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: unset
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: TOTO
+
+**get cmd: TATA
+
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m
+[35;1mminishell[0m[0;33m$ [0m************ ************ ************
+
+**get input: export TOTO TATA
+
+**add lexer succeed:
+token: export, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: TOTO
+
+**get cmd: TATA
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+declare -x SYSTEMD_EXEC_PID="2476518"
+declare -x SSH_AUTH_SOCK="/run/user/101835/keyring/ssh"
+declare -x SESSION_MANAGER="local/c2r4p1.42perpignan.fr:@/tmp/.ICE-unix/2476496,unix/c2r4p1.42perpignan.fr:/tmp/.ICE-unix/2476496"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/44245664_fc43_424e_8876_d0df7c86f6a5"
+declare -x LANG="en_US.UTF-8"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/nimorel"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x GPG_AGENT_INFO="/run/user/101835/gnupg/S.gpg-agent:0:1"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x QT_IM_MODULE="ibus"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session19"
+declare -x USER="nimorel"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101835/bus"
+declare -x DOCKER_HOST="unix:///run/user/101835/docker.sock"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x GTK_IM_MODULE="ibus"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x QT_ACCESSIBILITY="1"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101835_Lbt1bv"
+declare -x LOGNAME="nimorel"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x GNOME_TERMINAL_SERVICE=":1.226"
+declare -x HOME="/home/nimorel"
+declare -x PATH="/home/nimorel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/nimorel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XMODIFIERS="@im=ibus"
+declare -x XDG_RUNTIME_DIR="/run/user/101835"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x SHELL="/bin/zsh"
+declare -x VTE_VERSION="6800"
+declare -x COLORTERM="truecolor"
+declare -x XAUTHORITY="/home/nimorel/.Xauthority"
+declare -x PWD="/home/nimorel/today/Minishell_0412_no_pass_25lines"
+declare -x XDG_SESSION_CLASS="user"
+declare -x TERM="xterm-256color"
+declare -x GDMSESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x SHLVL="1"
+declare -x OLDPWD="/home/nimorel/today"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x _="/home/nimorel/today/Minishell_0412_no_pass_25lines/./minishell"
+declare -x TOTO=""
+declare -x TATA=""
+   g_status **: 0
+************ ************ ************
+
+**get input: unset TOTO TATA
+
+**add lexer succeed:
+token: unset, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: unset
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: TOTO
+
+**get cmd: TATA
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+declare -x SYSTEMD_EXEC_PID="2476518"
+declare -x SSH_AUTH_SOCK="/run/user/101835/keyring/ssh"
+declare -x SESSION_MANAGER="local/c2r4p1.42perpignan.fr:@/tmp/.ICE-unix/2476496,unix/c2r4p1.42perpignan.fr:/tmp/.ICE-unix/2476496"
+declare -x GNOME_TERMINAL_SCREEN="/org/gnome/Terminal/screen/44245664_fc43_424e_8876_d0df7c86f6a5"
+declare -x LANG="en_US.UTF-8"
+declare -x XDG_CURRENT_DESKTOP="ubuntu:GNOME"
+declare -x FT_HOOK_NAME="login-user"
+declare -x FT_HOOK_PATHNAME="login-user.d"
+declare -x XDG_GREETER_DATA_DIR="/var/lib/lightdm-data/nimorel"
+declare -x LIBVIRT_DEFAULT_URI="qemu:///system"
+declare -x GPG_AGENT_INFO="/run/user/101835/gnupg/S.gpg-agent:0:1"
+declare -x DESKTOP_SESSION="ubuntu"
+declare -x QT_IM_MODULE="ibus"
+declare -x XDG_MENU_PREFIX="gnome-"
+declare -x XDG_SESSION_PATH="/org/freedesktop/DisplayManager/Session19"
+declare -x USER="nimorel"
+declare -x DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/101835/bus"
+declare -x DOCKER_HOST="unix:///run/user/101835/docker.sock"
+declare -x SSH_AGENT_LAUNCHER="gnome-keyring"
+declare -x GTK_MODULES="gail:atk-bridge"
+declare -x XDG_CONFIG_DIRS="/etc/xdg/xdg-ubuntu:/etc/xdg"
+declare -x GTK_IM_MODULE="ibus"
+declare -x XDG_SESSION_DESKTOP="ubuntu"
+declare -x QT_ACCESSIBILITY="1"
+declare -x GNOME_DESKTOP_SESSION_ID="this-is-deprecated"
+declare -x KRB5CCNAME="FILE:/tmp/krb5cc_101835_Lbt1bv"
+declare -x LOGNAME="nimorel"
+declare -x XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+declare -x GNOME_TERMINAL_SERVICE=":1.226"
+declare -x HOME="/home/nimorel"
+declare -x PATH="/home/nimorel/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+declare -x XDG_DATA_DIRS="/usr/share/ubuntu:/usr/share/gnome:/home/nimorel/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop"
+declare -x XMODIFIERS="@im=ibus"
+declare -x XDG_RUNTIME_DIR="/run/user/101835"
+declare -x XDG_SESSION_TYPE="x11"
+declare -x SHELL="/bin/zsh"
+declare -x VTE_VERSION="6800"
+declare -x COLORTERM="truecolor"
+declare -x XAUTHORITY="/home/nimorel/.Xauthority"
+declare -x PWD="/home/nimorel/today/Minishell_0412_no_pass_25lines"
+declare -x XDG_SESSION_CLASS="user"
+declare -x TERM="xterm-256color"
+declare -x GDMSESSION="ubuntu"
+declare -x DISPLAY=":0"
+declare -x SHLVL="1"
+declare -x OLDPWD="/home/nimorel/today"
+declare -x LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:"
+declare -x _="/home/nimorel/today/Minishell_0412_no_pass_25lines/./minishell"
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: export TOTO=1 TATA=2
+
+**add lexer succeed:
+token: export, type: 0
+token: TOTO=1, type: 0
+token: TATA=2, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: TOTO=1
+
+**Filling tab: add line 0: TATA=2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: TOTO=1
+
+**get cmd: TATA=2
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: unset TOTO TATA
+
+**add lexer succeed:
+token: unset, type: 0
+token: TOTO, type: 0
+token: TATA, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: unset
+
+**Filling tab: add line 0: TOTO
+
+**Filling tab: add line 0: TATA
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: TOTO
+
+**get cmd: TATA
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: $home
+
+**add lexer succeed:
+token: $home, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: $home
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+   g_status **: 0
+************ ************ ************
+
+**get input: echo $home
+
+**add lexer succeed:
+token: echo, type: 0
+token: $home, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $home
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+   g_status **: 0
+************ ************ ************
+
+**get input: echo $HOME
+
+**add lexer succeed:
+token: echo, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME/today
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME/today, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME/today
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: cd /home/nimorel/today/
+
+**add lexer succeed:
+token: cd, type: 0
+token: /home/nimorel/today/, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: /home/nimorel/today/
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: /home/nimorel/today/
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: cd includes/
+
+**add lexer succeed:
+token: cd, type: 0
+token: includes/, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: includes/
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: includes/
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: pwd
+
+**add lexer succeed:
+token: pwd, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME/today
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME/today, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME/today
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: pwd
+
+**add lexer succeed:
+token: pwd, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: pwd
+
+**add lexer succeed:
+token: pwd, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+tokens->next->value $HOME
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+tokens->next->value (null)
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+tokens->next->value (null)
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: pwd
+
+**add lexer succeed:
+token: pwd, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+
+**add lexer succeed:
+token: cd, type: 0
+token: $HOME, type: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: $HOME
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+cd success.
+   g_status **: 0

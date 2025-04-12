@@ -1,0 +1,14 @@
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------

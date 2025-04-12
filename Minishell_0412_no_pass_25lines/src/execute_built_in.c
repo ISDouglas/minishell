@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_built_in.c                                         :+:      :+:    :+:   */
+/*   execute_built_in.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -22,7 +22,7 @@ int	ft_env(t_env *env)
 	while (current)
 	{
 		if (ft_strcmp(current->value, "") != 0)
-		{	
+		{
 			write(1, current->name, ft_strlen(current->name));
 			write(1, "=", 1);
 			write(1, current->value, ft_strlen(current->value));

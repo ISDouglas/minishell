@@ -46,7 +46,6 @@ int	ft_update_var(t_env *env, char *name, char *value)
 		}
 		current = current->next;
 	}
-	//return (printf("update env: update %s failed\n", name), FAILURE);
 	return (FAILURE);
 }
 
@@ -78,6 +77,7 @@ static int	ft_add_var(t_env **env, char *name, char *value)
 	free(value);
 	return (SUCCESS);
 }
+
 static int	ft_export_no_arg(t_env *env)
 {
 	t_env	*current;
@@ -87,11 +87,10 @@ static int	ft_export_no_arg(t_env *env)
 	current = env;
 	while (current)
 	{
-		write(1, "declare -x ",11);
+		write(1, "declare -x ", 11);
 		write(1, current->name, ft_strlen(current->name));
-		
 		if (current->value != NULL)
-		{	
+		{
 			write(1, "=", 1);
 			write(1, "\"", 1);
 			write(1, current->value, ft_strlen(current->value));
@@ -102,10 +101,11 @@ static int	ft_export_no_arg(t_env *env)
 	}
 	return (SUCCESS);
 }
-int ft_export(t_token *tokens, t_env **env)
+
+int	ft_export(t_token *tokens, t_env **env)
 {
-	char *name;
-	char *value;
+	char	*name;
+	char	*value;
 
 	if (!tokens->next)
 	{
@@ -127,5 +127,3 @@ int ft_export(t_token *tokens, t_env **env)
 	}
 	return (SUCCESS);
 }
-
-

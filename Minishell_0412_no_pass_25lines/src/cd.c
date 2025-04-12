@@ -26,13 +26,41 @@ int	ft_pwd(void)
 	return (FAILURE);
 }
 
-static char	*ft_cd_path(t_token *tokens, t_env *env)
+/*static char	*ft_cd_path(t_token *tokens, t_env *env)
 {
 	if (!tokens->next || ft_strcmp(tokens->next->value, "~") == 0)
 		return (ft_getenv(env, "HOME"));
 	if (ft_strcmp(tokens->next->value, "-") == 0)
 		return (ft_getenv(env, "OLDPWD"));
 	return (tokens->next->value);
+}*/
+
+static char *ft_env_var_path(t_token *tokens, t_env *env)
+{
+	
+	char *cd_path;
+	(void) env;
+
+	cd_path = NULL;
+	if (!ft_strchr(tokens->next->value, '/'))
+		cd_path = ft_getenv(env, tokens->next->value + 1);
+	return (cd_path);
+}
+
+static char	*ft_cd_path(t_token *tokens, t_env *env)
+{
+	char *cd_path;
+
+	cd_path = NULL;
+	if (!tokens->next || ft_strcmp(tokens->next->value, "~") == 0)
+		return (ft_getenv(env, "HOME"));
+	if (ft_strcmp(tokens->next->value, "-") == 0)
+		return (ft_getenv(env, "OLDPWD"));
+	if (tokens->next->type == ENV_VAR)
+		cd_path = ft_env_var_path(tokens, env);
+	if (tokens->next->type == WORD)
+		cd_path = tokens->next->value;
+	return (cd_path);
 }
 
 int	ft_cd(t_token *tokens, t_env *env)

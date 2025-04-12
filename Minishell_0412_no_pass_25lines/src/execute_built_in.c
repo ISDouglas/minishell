@@ -21,10 +21,13 @@ int	ft_env(t_env *env)
 	current = env;
 	while (current)
 	{
-		write(1, current->name, ft_strlen(current->name));
-		write(1, "=", 1);
-		write(1, current->value, ft_strlen(current->value));
-		write(1, "\n", 1);
+		if (ft_strcmp(current->value, "") != 0)
+		{	
+			write(1, current->name, ft_strlen(current->name));
+			write(1, "=", 1);
+			write(1, current->value, ft_strlen(current->value));
+			write(1, "\n", 1);
+		}
 		current = current->next;
 	}
 	return (SUCCESS);

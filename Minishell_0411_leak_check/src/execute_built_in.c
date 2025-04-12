@@ -59,7 +59,7 @@ int	ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini)
 	//return (-1);
 }
 
-void ft_cd_export_etc(t_mini *mini, int i)
+void ft_cd_export_unset(t_mini *mini, int i)
 {
 	char	*cmd;
 

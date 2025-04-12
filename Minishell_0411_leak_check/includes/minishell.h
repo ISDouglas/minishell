@@ -6,7 +6,7 @@
 /*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/11 19:23:27 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/12 08:53:09 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,9 @@ Lan modify during including Nico version 0405 on 0409:
 
 
 ***(lan on 0411)TEST ON memory leaks:
-1: export without =: leaks (only export with "=" will be accept by env)
-	export hi hi= hi= hello
-	
-2: cd into a folder: leaks
-	cd obj
-	
+1: export without =: leaks (only export with "=" will be accept by env, but not fro export)
+	export hi hi= hi=hello hello
+		
 */
 
 
@@ -211,7 +208,7 @@ char			*ft_get_path(char *cmd, t_env *env);
 int				ft_cmd_type(char *cmd);
 int				ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini);
 int				ft_env(t_env *env);
-void 			ft_cd_export_etc(t_mini *mini, int i);
+void 			ft_cd_export_unset(t_mini *mini, int i);
 
 /*  export.c */
 int				ft_export(t_token *tokens, t_env **env);

@@ -6,7 +6,7 @@
 /*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 17:26:37 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/11 17:34:11 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/12 08:46:17 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ int	ft_update_var(t_env *env, char *name, char *value)
 				current->value = value;
 			}
 			free(name);
-			free(value);
 			return (SUCCESS);
 		}
 		current = current->next;

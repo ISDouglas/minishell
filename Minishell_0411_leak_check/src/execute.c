@@ -6,7 +6,7 @@
 /*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 15:16:43 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/11 18:25:21 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/12 08:35:24 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ void	ft_execute_parent(t_mini *mini, int i, int pipe[2], int pid)
 	//g_status = (g_status >> 8) & 0xFF;
 	g_status = WEXITSTATUS(g_status);
 	//printf("g_status of cmd %d: %d\n", i + 1, g_status);  // ** test code
-	ft_cd_export_etc(mini, i);
+	ft_cd_export_unset(mini, i);
 	if (mini->pre != -1)
 	{
 		printf("          pre before close: %d\n", mini->pre);     // ** test code

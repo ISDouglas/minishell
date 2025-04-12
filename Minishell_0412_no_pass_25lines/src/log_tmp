@@ -1,0 +1,831 @@
+************ ************ ************
+
+**get input: pwd
+
+**add lexer succeed:
+token: pwd, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b66680, value: pwd
+add line 0: pwd
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: export USER=layang11111111111111
+
+**add lexer succeed:
+token: export, type: 0
+token: USER=layang11111111111111, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b66e30, value: export
+add line 0: export
+
+tmp address: 0x4b66f50, value: USER=layang11111111111111
+add line 0: USER=layang11111111111111
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: USER=layang11111111111111
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b67630, value: export
+add line 0: export
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+LANGUAGE=en
+USER=layang11111111111111
+XDG_SESSION_TYPE=x11
+SHLVL=2
+LD_LIBRARY_PATH=/usr/lib/debug
+LESS=-R
+HOME=/home/layang
+OLDPWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check
+DESKTOP_SESSION=ubuntu
+LSCOLORS=Gxfxcxdxbxegedabagacad
+ZSH=/home/layang/.oh-my-zsh
+GTK_MODULES=gail:atk-bridge
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+PAGER=less
+PS1=\e[32m❤️ Let's test Minishell on bash$ \e[0m
+DBUS_STARTER_BUS_TYPE=session
+SYSTEMD_EXEC_PID=3786184
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+COLORTERM=truecolor
+LIBVIRT_DEFAULT_URI=qemu:///system
+GTK_IM_MODULE=ibus
+LOGNAME=layang
+_=/usr/bin/valgrind
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+FT_HOOK_PATHNAME=login-user.d
+PATH=/home/layang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/c2r4p2.42perpignan.fr:@/tmp/.ICE-unix/3786184,unix/c2r4p2.42perpignan.fr:/tmp/.ICE-unix/3786184
+GDM_LANG=en
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session19
+XDG_MENU_PREFIX=gnome-
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/b22b7b71_4d2f_430f_b66d_5ed238485930
+XDG_RUNTIME_DIR=/run/user/101922
+GLIBCPP_FORCE_NEW=1
+DISPLAY=:0
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XDG_SESSION_DESKTOP=ubuntu
+XAUTHORITY=/home/layang/.Xauthority
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.133
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/101922/keyring/ssh
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/layang
+SHELL=/bin/zsh
+KRB5CCNAME=FILE:/tmp/krb5cc_101922_7AedsJ
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+FT_HOOK_NAME=login-user
+DOCKER_HOST=unix:///run/user/101922/docker.sock
+GPG_AGENT_INFO=/run/user/101922/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check/src
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+DBUS_STARTER_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/layang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VTE_VERSION=6800
+GLIBCXX_FORCE_NEW=1
+LD_PRELOAD=/usr/libexec/valgrind/vgpreload_core-amd64-linux.so:/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+   g_status **: 0
+************ ************ ************
+
+**get input: export USER=layang
+
+**add lexer succeed:
+token: export, type: 0
+token: USER=layang, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b68b90, value: export
+add line 0: export
+
+tmp address: 0x4b68ca0, value: USER=layang
+add line 0: USER=layang
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: USER=layang
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6a210, value: env
+add line 0: env
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: export piiiiiiiiiiiiiiiiii=
+
+**add lexer succeed:
+token: export, type: 0
+token: piiiiiiiiiiiiiiiiii=, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6a890, value: export
+add line 0: export
+
+tmp address: 0x4b6a9b0, value: piiiiiiiiiiiiiiiiii=
+add line 0: piiiiiiiiiiiiiiiiii=
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: piiiiiiiiiiiiiiiiii=
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6b1a0, value: export
+add line 0: export
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+LANGUAGE=en
+USER=layang
+XDG_SESSION_TYPE=x11
+SHLVL=2
+LD_LIBRARY_PATH=/usr/lib/debug
+LESS=-R
+HOME=/home/layang
+OLDPWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check
+DESKTOP_SESSION=ubuntu
+LSCOLORS=Gxfxcxdxbxegedabagacad
+ZSH=/home/layang/.oh-my-zsh
+GTK_MODULES=gail:atk-bridge
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+PAGER=less
+PS1=\e[32m❤️ Let's test Minishell on bash$ \e[0m
+DBUS_STARTER_BUS_TYPE=session
+SYSTEMD_EXEC_PID=3786184
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+COLORTERM=truecolor
+LIBVIRT_DEFAULT_URI=qemu:///system
+GTK_IM_MODULE=ibus
+LOGNAME=layang
+_=/usr/bin/valgrind
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+FT_HOOK_PATHNAME=login-user.d
+PATH=/home/layang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/c2r4p2.42perpignan.fr:@/tmp/.ICE-unix/3786184,unix/c2r4p2.42perpignan.fr:/tmp/.ICE-unix/3786184
+GDM_LANG=en
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session19
+XDG_MENU_PREFIX=gnome-
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/b22b7b71_4d2f_430f_b66d_5ed238485930
+XDG_RUNTIME_DIR=/run/user/101922
+GLIBCPP_FORCE_NEW=1
+DISPLAY=:0
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XDG_SESSION_DESKTOP=ubuntu
+XAUTHORITY=/home/layang/.Xauthority
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.133
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/101922/keyring/ssh
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/layang
+SHELL=/bin/zsh
+KRB5CCNAME=FILE:/tmp/krb5cc_101922_7AedsJ
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+FT_HOOK_NAME=login-user
+DOCKER_HOST=unix:///run/user/101922/docker.sock
+GPG_AGENT_INFO=/run/user/101922/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check/src
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+DBUS_STARTER_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/layang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VTE_VERSION=6800
+GLIBCXX_FORCE_NEW=1
+LD_PRELOAD=/usr/libexec/valgrind/vgpreload_core-amd64-linux.so:/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+piiiiiiiiiiiiiiiiii=
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6b6f0, value: env
+add line 0: env
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: unset piiiiiiiiiiiiiiiiii
+
+**add lexer succeed:
+token: unset, type: 0
+token: piiiiiiiiiiiiiiiiii, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6bd40, value: unset
+add line 0: unset
+
+tmp address: 0x4b6be60, value: piiiiiiiiiiiiiiiiii
+add line 0: piiiiiiiiiiiiiiiiii
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: piiiiiiiiiiiiiiiiii
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6c490, value: export
+add line 0: export
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+LANGUAGE=en
+USER=layang
+XDG_SESSION_TYPE=x11
+SHLVL=2
+LD_LIBRARY_PATH=/usr/lib/debug
+LESS=-R
+HOME=/home/layang
+OLDPWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check
+DESKTOP_SESSION=ubuntu
+LSCOLORS=Gxfxcxdxbxegedabagacad
+ZSH=/home/layang/.oh-my-zsh
+GTK_MODULES=gail:atk-bridge
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+PAGER=less
+PS1=\e[32m❤️ Let's test Minishell on bash$ \e[0m
+DBUS_STARTER_BUS_TYPE=session
+SYSTEMD_EXEC_PID=3786184
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+COLORTERM=truecolor
+LIBVIRT_DEFAULT_URI=qemu:///system
+GTK_IM_MODULE=ibus
+LOGNAME=layang
+_=/usr/bin/valgrind
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+FT_HOOK_PATHNAME=login-user.d
+PATH=/home/layang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/c2r4p2.42perpignan.fr:@/tmp/.ICE-unix/3786184,unix/c2r4p2.42perpignan.fr:/tmp/.ICE-unix/3786184
+GDM_LANG=en
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session19
+XDG_MENU_PREFIX=gnome-
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/b22b7b71_4d2f_430f_b66d_5ed238485930
+XDG_RUNTIME_DIR=/run/user/101922
+GLIBCPP_FORCE_NEW=1
+DISPLAY=:0
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XDG_SESSION_DESKTOP=ubuntu
+XAUTHORITY=/home/layang/.Xauthority
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.133
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/101922/keyring/ssh
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/layang
+SHELL=/bin/zsh
+KRB5CCNAME=FILE:/tmp/krb5cc_101922_7AedsJ
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+FT_HOOK_NAME=login-user
+DOCKER_HOST=unix:///run/user/101922/docker.sock
+GPG_AGENT_INFO=/run/user/101922/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check/src
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+DBUS_STARTER_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/layang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VTE_VERSION=6800
+GLIBCXX_FORCE_NEW=1
+LD_PRELOAD=/usr/libexec/valgrind/vgpreload_core-amd64-linux.so:/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6caf0, value: env
+add line 0: env
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: clear
+
+**add lexer succeed:
+token: clear, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6d040, value: clear
+add line 0: clear
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: clear
+   g_status **: 1
+************ ************ ************
+
+**get input: export hi hi= hi= hello
+
+**add lexer succeed:
+token: export, type: 0
+token: hi, type: 0
+token: hi=, type: 0
+token: hi=, type: 0
+token: hello, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6d630, value: export
+add line 0: export
+
+tmp address: 0x4b6d740, value: hi
+add line 0: hi
+
+tmp address: 0x4b6d850, value: hi=
+add line 0: hi=
+
+tmp address: 0x4b6d960, value: hi=
+add line 0: hi=
+
+tmp address: 0x4b6da70, value: hello
+add line 0: hello
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: hi
+
+**get cmd: hi=
+
+**get cmd: hi=
+
+**get cmd: hello
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6e460, value: export
+add line 0: export
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+LANGUAGE=en
+USER=layang
+XDG_SESSION_TYPE=x11
+SHLVL=2
+LD_LIBRARY_PATH=/usr/lib/debug
+LESS=-R
+HOME=/home/layang
+OLDPWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check
+DESKTOP_SESSION=ubuntu
+LSCOLORS=Gxfxcxdxbxegedabagacad
+ZSH=/home/layang/.oh-my-zsh
+GTK_MODULES=gail:atk-bridge
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+PAGER=less
+PS1=\e[32m❤️ Let's test Minishell on bash$ \e[0m
+DBUS_STARTER_BUS_TYPE=session
+SYSTEMD_EXEC_PID=3786184
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+COLORTERM=truecolor
+LIBVIRT_DEFAULT_URI=qemu:///system
+GTK_IM_MODULE=ibus
+LOGNAME=layang
+_=/usr/bin/valgrind
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+FT_HOOK_PATHNAME=login-user.d
+PATH=/home/layang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/c2r4p2.42perpignan.fr:@/tmp/.ICE-unix/3786184,unix/c2r4p2.42perpignan.fr:/tmp/.ICE-unix/3786184
+GDM_LANG=en
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session19
+XDG_MENU_PREFIX=gnome-
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/b22b7b71_4d2f_430f_b66d_5ed238485930
+XDG_RUNTIME_DIR=/run/user/101922
+GLIBCPP_FORCE_NEW=1
+DISPLAY=:0
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XDG_SESSION_DESKTOP=ubuntu
+XAUTHORITY=/home/layang/.Xauthority
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.133
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/101922/keyring/ssh
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/layang
+SHELL=/bin/zsh
+KRB5CCNAME=FILE:/tmp/krb5cc_101922_7AedsJ
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+FT_HOOK_NAME=login-user
+DOCKER_HOST=unix:///run/user/101922/docker.sock
+GPG_AGENT_INFO=/run/user/101922/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check/src
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+DBUS_STARTER_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/layang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VTE_VERSION=6800
+GLIBCXX_FORCE_NEW=1
+LD_PRELOAD=/usr/libexec/valgrind/vgpreload_core-amd64-linux.so:/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+hi=
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6e9b0, value: env
+add line 0: env
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: unset hi
+
+**add lexer succeed:
+token: unset, type: 0
+token: hi, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6ef00, value: unset
+add line 0: unset
+
+tmp address: 0x4b6f010, value: hi
+add line 0: hi
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: hi
+   g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+token: env, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6f8a0, value: env
+add line 0: env
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: env
+   g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+token: export, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b6fe40, value: export
+add line 0: export
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------
+
+**start fill simple cmd_array
+
+**get cmd: export
+LANGUAGE=en
+USER=layang
+XDG_SESSION_TYPE=x11
+SHLVL=2
+LD_LIBRARY_PATH=/usr/lib/debug
+LESS=-R
+HOME=/home/layang
+OLDPWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check
+DESKTOP_SESSION=ubuntu
+LSCOLORS=Gxfxcxdxbxegedabagacad
+ZSH=/home/layang/.oh-my-zsh
+GTK_MODULES=gail:atk-bridge
+XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+PAGER=less
+PS1=\e[32m❤️ Let's test Minishell on bash$ \e[0m
+DBUS_STARTER_BUS_TYPE=session
+SYSTEMD_EXEC_PID=3786184
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+COLORTERM=truecolor
+LIBVIRT_DEFAULT_URI=qemu:///system
+GTK_IM_MODULE=ibus
+LOGNAME=layang
+_=/usr/bin/valgrind
+XDG_SESSION_CLASS=user
+TERM=xterm-256color
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+FT_HOOK_PATHNAME=login-user.d
+PATH=/home/layang/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+SESSION_MANAGER=local/c2r4p2.42perpignan.fr:@/tmp/.ICE-unix/3786184,unix/c2r4p2.42perpignan.fr:/tmp/.ICE-unix/3786184
+GDM_LANG=en
+XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session19
+XDG_MENU_PREFIX=gnome-
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/b22b7b71_4d2f_430f_b66d_5ed238485930
+XDG_RUNTIME_DIR=/run/user/101922
+GLIBCPP_FORCE_NEW=1
+DISPLAY=:0
+LANG=en_US.UTF-8
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XMODIFIERS=@im=ibus
+XDG_SESSION_DESKTOP=ubuntu
+XAUTHORITY=/home/layang/.Xauthority
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+GNOME_TERMINAL_SERVICE=:1.133
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/101922/keyring/ssh
+XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/layang
+SHELL=/bin/zsh
+KRB5CCNAME=FILE:/tmp/krb5cc_101922_7AedsJ
+QT_ACCESSIBILITY=1
+GDMSESSION=ubuntu
+FT_HOOK_NAME=login-user
+DOCKER_HOST=unix:///run/user/101922/docker.sock
+GPG_AGENT_INFO=/run/user/101922/gnupg/S.gpg-agent:0:1
+QT_IM_MODULE=ibus
+PWD=/home/layang/42Cursus/07-minishell-lan-branch/Minishell_0411_leak_check/src
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+DBUS_STARTER_ADDRESS=unix:path=/run/user/101922/bus,guid=bc0a3c2d5da1008928265e6767fa084c
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/home/layang/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+VTE_VERSION=6800
+GLIBCXX_FORCE_NEW=1
+LD_PRELOAD=/usr/libexec/valgrind/vgpreload_core-amd64-linux.so:/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+token: exit, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+
+
+**Filling tab now: 
+tmp address: 0x4b70390, value: exit
+add line 0: exit
+
+*i is: 1
+
+Until line 1, finish fill_tab. Executing>>>>
+------- -------  ------- -------  -------

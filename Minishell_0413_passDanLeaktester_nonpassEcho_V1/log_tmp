@@ -1,0 +1,226 @@
+************ ************ ************
+
+**get input: echo sd >b >a oo sf gg ht htyj "sf\n"
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: sd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 7: value: oo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 8: value: sf, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 9: value: gg, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 10: value: ht, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 11: value: htyj, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 12: value: sf\n, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: sd
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: b
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: a
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: sf
+
+**Filling tab: add line 0: gg
+
+**Filling tab: add line 0: ht
+
+**Filling tab: add line 0: htyj
+
+**Filling tab: add line 0: sf\n
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: sd
+
+**get cmd: oo
+
+**get cmd: sf
+
+**get cmd: gg
+
+**get cmd: ht
+
+**get cmd: htyj
+
+**get cmd: sf\n
+   g_status **: 0
+************ ************ ************
+
+**get input: cat a
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: a
+   g_status **: 0
+************ ************ ************
+
+**get input: echo sd oo sf gg ht htyj "sf\n" > a
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: sd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: oo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: sf, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: gg, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: ht, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 7: value: htyj, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 8: value: sf\n, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 9: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 10: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: sd
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: sf
+
+**Filling tab: add line 0: gg
+
+**Filling tab: add line 0: ht
+
+**Filling tab: add line 0: htyj
+
+**Filling tab: add line 0: sf\n
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: sd
+
+**get cmd: oo
+
+**get cmd: sf
+
+**get cmd: gg
+
+**get cmd: ht
+
+**get cmd: htyj
+
+**get cmd: sf\n
+   g_status **: 0
+************ ************ ************
+
+**get input: cat a
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: a
+   g_status **: 0

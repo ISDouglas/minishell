@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_built_in.c                                         :+:      :+:    :+:   */
+/*   execute_built_in.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 09:30:21 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/09 18:05:01 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/13 21:19:55 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_env(t_env *env)
 	while (current)
 	{
 		if (ft_strcmp(current->value, "") != 0)
-		{	
+		{
 			write(1, current->name, ft_strlen(current->name));
 			write(1, "=", 1);
 			write(1, current->value, ft_strlen(current->value));
@@ -48,7 +48,7 @@ int	ft_cmd_type(char *cmd)
 int	ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini)
 {
 	if (ft_strcmp(cmd, "echo") == 0)
-		return (ft_echo(tokens, mini->env));
+		return (ft_echo(mini->cmd_array));
 	else if (ft_strcmp(cmd, "pwd") == 0)
 		return (ft_pwd());
 	else if (ft_strcmp(cmd, "cd") == 0)
@@ -59,10 +59,9 @@ int	ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini)
 		return (ft_unset(tokens, &mini->env));
 	else
 		return (ft_env(mini->env));
-	//return (-1);
 }
 
-void ft_cd_export_unset(t_mini *mini, int i)
+void	ft_cd_export_unset(t_mini *mini, int i)
 {
 	char	*cmd;
 
@@ -74,7 +73,6 @@ void ft_cd_export_unset(t_mini *mini, int i)
 				g_status = ft_is_built_in(cmd, mini->lexer, mini);
 		free(cmd);
 	}
-	
 }
 
 /* 

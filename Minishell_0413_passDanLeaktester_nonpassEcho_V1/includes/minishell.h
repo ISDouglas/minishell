@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/13 13:27:40 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/13 21:27:38 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,14 @@
 ***(lan on 0411)TEST ON memory leaks:
 1: export without =: leaks (only export with "=" will be accept by env, but not fro export)
 	export hi hi= hi=hello hello
-		
+
+***(lNICO on 0413) modiify files fot echo
+1: minishell.h add token_type ENV_VAR_SQUOTE, new protoype ft_echo.c
+2: modify ft_add_cmd in execute_fill_cmd.c
+3: modify echo.c
+4: modify ft_is_built_in in execute_built_in.c
+5: modify ft_handle_quote in lexer.c
+Must we add ENV_VAR_SQUOTE in ft_syntax_err_ctr in ft_error_ctr.c ????
 */
 
 
@@ -75,6 +82,7 @@ typedef enum	e_token_type
 	HEREDOC,
 	APPEND,
 	ENV_VAR,
+	ENV_VAR_SQUOTE,
 	AND,
 	OR,
 	WILDCARDS
@@ -118,12 +126,12 @@ extern int g_status;
  *  				add this line otherwise error occured on MACOS
  *  
  *****************************************************************************/
-/* #if __linux__
-	# include <wait.h>
-#endif
-#if __APPLE__
-	extern int rl_replace_line(const char *text, int i);
-#endif */
+//#if __linux__
+//	# include <wait.h>
+//#endif
+//#if __APPLE__
+//	extern int rl_replace_line(const char *text, int i);
+//#endif
 
 /*****************************************************************************
  *  
@@ -204,7 +212,8 @@ int				ft_cd(t_token *tokens, t_env *env);
 int				ft_pwd(void);
 
 /* echo.c */
-int				ft_echo(t_token *tokens, t_env *env);
+
+int				ft_echo(char **cmd_array);
 
 /* unset */
 int				ft_unset(t_token *tokens, t_env **env);

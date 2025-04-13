@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   lexer.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 08:47:36 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/13 13:19:07 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/13 21:05:31 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,10 @@ static void	ft_handle_quote(const char *input, size_t *i, t_token **tokens)
 			return ;
 		ft_memcpy(quoted_word, &input[start], len);
 		quoted_word[len] = '\0';
-		ft_add_token(tokens, ft_create_token(quoted_word, WORD));
+		if (ft_strchr(quoted_word, '$'))
+			ft_add_token(tokens, ft_create_token(quoted_word, ENV_VAR_SQUOTE));
+		else
+			ft_add_token(tokens, ft_create_token(quoted_word, WORD));
 		free(quoted_word);
 		(*i)++;
 	}

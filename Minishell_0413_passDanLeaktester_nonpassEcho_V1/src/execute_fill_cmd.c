@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   execute_fill_cmd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 11:29:53 by layang            #+#    #+#             */
-/*   Updated: 2025/04/13 13:12:06 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/13 21:17:45 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,19 +94,16 @@ void	ft_here_doc(t_token	**heredoc, t_mini	*mi)
 void	ft_add_cmd(t_mini	*mini, t_token	**cmd, t_token_type	type)
 {
 	char	*str;
-	
-	if (type == WORD || type == ENV_VAR)
+
+	if (type == WORD || type == ENV_VAR_SQUOTE)
+		(*cmd)->cmd = ft_strdup((*cmd)->value);
+	if (type == ENV_VAR)
 	{
-		if (type == WORD)
+		str = ft_getenv(mini->env, (*cmd)->value + 1);
+		if (str == NULL)
 			(*cmd)->cmd = ft_strdup((*cmd)->value);
 		else
-		{
-			str = ft_getenv(mini->env, (*cmd)->value + 1);
-			if (str == NULL)
-				(*cmd)->cmd = ft_strdup((*cmd)->value);
-			else
-				(*cmd)->cmd = ft_strdup(str);
-		}
+			(*cmd)->cmd = ft_strdup(str);
 	}
 	ft_pass_in_out(cmd);
 	*cmd = (*cmd)->next;

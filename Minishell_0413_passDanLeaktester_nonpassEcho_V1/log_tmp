@@ -4024,3 +4024,475 @@ Until line 1, finish fill_tab. Executing>>>>-------
 
 
 Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: /bin/ls
+
+**add lexer succeed:
+
+++token 1: value: /bin/ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /bin/ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /bin/ls
+   g_status **: 0
+************ ************ ************
+
+**get input: s
+
+**add lexer succeed:
+
+++token 1: value: s, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: s
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: s
+   g_status **: 127
+************ ************ ************
+
+**get input:         
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:     
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:  
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: cat | ls
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 1: ls
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: cat
+
+---fill child cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: ls
+
+---fill last cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: cat | ls
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 1: ls
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: cat
+
+---fill child cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+
+[35;1mminishell[0m[0;33m$ [0mpre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: ls
+
+---fill last cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: cat | ls
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 1: ls
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: cat
+
+---fill child cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: ls
+
+---fill last cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: .
+
+**add lexer succeed:
+
+++token 1: value: ., type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: .
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: .
+   g_status **: 1
+************ ************ ************
+
+**get input: grep oi | ls
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: oi, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: oi
+
+**Filling tab: add line 1: ls
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: grep
+
+**get cmd: oi
+
+---fill child cmd: 
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: grep
+
+++token 2: value: oi, type: 0
+   in: 0, out: 1 cmd: oi
+
+[35;1mminishell[0m[0;33m$ [0mpre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: ls
+
+---fill last cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: grep oi | ls "oi"
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: oi, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: oi, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: oi
+
+**Filling tab: add line 1: ls
+
+**Filling tab: add line 1: oi
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: grep
+
+**get cmd: oi
+
+---fill child cmd: 
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: grep
+
+++token 2: value: oi, type: 0
+   in: 0, out: 1 cmd: oi
+
+[35;1mminishell[0m[0;33m$ [0mpre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: ls
+
+**get cmd: oi
+
+---fill last cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+
+++token 2: value: oi, type: 0
+   in: 0, out: 1 cmd: oi
+          pre before close: 5
+   g_status **: 1
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:       
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:  
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:    
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input:     
+
+**add lexer succeed:
+
+*nb of unit: 1
+
+*Tab size: 1
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------

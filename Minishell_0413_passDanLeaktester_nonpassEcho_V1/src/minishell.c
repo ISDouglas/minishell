@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:44:04 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/13 12:09:03 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/14 09:49:36 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static void	ft_prompt(t_mini	*mini)
 		{
 			ft_test_log(mini);
 			add_history(mini->input);
-			if (ft_lexer(mini) == 2)
+			if (ft_lexer(mini) == 2 || ft_is_empty_input(mini->input))
 			{
 				ft_free_mini(mini, 0);
 				close(mini->log_fd);

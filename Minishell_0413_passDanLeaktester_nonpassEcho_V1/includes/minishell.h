@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/14 08:59:34 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/14 09:55:19 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@
 Must we add ENV_VAR_SQUOTE in ft_syntax_err_ctr in ft_error_ctr.c ????
 ***(lNICO on 0414) 
 1 : modify ft_add_cmd in execute_fill_cmd.c for $?
+2: add funtion int	ft_is_empty_input(char *input) in utils.c
+3: add this line if (ft_lexer(mini) == 2 || ft_is_empty_input(mini->input))
+in ft_prompt line 80 fo handle only Ispaces caracter input
 */
 
 
@@ -166,6 +169,7 @@ int				ft_fill_exe_tab(t_mini	*mini);
 int				ft_isspace(int c);
 void			ft_close_cmd_fd(t_token	*tokens);
 void			ft_free_mini(t_mini *all, int sign);
+int				ft_is_empty_input(char *input);
 
 /* environment.c 5*/   
 t_env			*ft_create_env_node(const char *name, const char *value);

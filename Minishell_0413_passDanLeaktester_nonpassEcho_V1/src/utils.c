@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:57:41 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/13 12:52:49 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/14 09:46:39 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,15 @@ void	ft_free_mini(t_mini *all, int sign)
 		close(all->stdout_fd);
 		clear_history();
 	}
+}
+
+int	ft_is_empty_input(char *input)
+{
+	while (*input)
+	{
+		if (!ft_isspace(*input))
+			return (0);
+		input++;
+	}
+	return (1);
 }

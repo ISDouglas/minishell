@@ -89,6 +89,11 @@ static void	ft_not_built_in(t_mini *mini)
 		path = ft_strdup(mini->cmd_array[0]);
 	}
 	path = ft_check_path_validity(mini, path);
+	if (mini->array_env)
+		ft_free_array(&mini->array_env);
+	mini->array_env = ft_env_to_array(mini->env);
+	//if (mini->array_env)
+	//	printf("have path now!\n");
     if (execve(path, mini->cmd_array, mini->array_env) == -1)
     {
 		perror("execve");

@@ -1,0 +1,1095 @@
+************ ************ ************
+
+**get input: exit 6w | echo eo
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 6w, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: eo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 6w
+
+**Filling tab: add line 1: echo
+
+**Filling tab: add line 1: eo
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: exit
+
+**get cmd: 6w
+
+---fill child cmd: 
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: exit
+
+++token 2: value: 6w, type: 0
+   in: 0, out: 1 cmd: 6w
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 2
+
+**get cmd: echo
+
+**get cmd: eo
+
+---fill last cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: eo, type: 0
+   in: 0, out: 1 cmd: eo
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: exit 6w
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 6w, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 6w
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+
+**get cmd: 6w
+exit: numeric argument required
+exit (with signal: 2)
+************ ************ ************
+
+**get input: echo er | exit y
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: y, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: er
+
+**Filling tab: add line 1: exit
+
+**Filling tab: add line 1: y
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: er
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: er
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: exit
+
+**get cmd: y
+
+---fill last cmd: 
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: exit
+
+++token 2: value: y, type: 0
+   in: 0, out: 1 cmd: y
+          pre before close: 5
+   g_status **: 2
+************ ************ ************
+
+**get input: echo er | exit y
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: y, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: er
+
+**Filling tab: add line 1: exit
+
+**Filling tab: add line 1: y
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: er
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: er
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: exit
+
+**get cmd: y
+
+---fill last cmd: 
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: exit
+
+++token 2: value: y, type: 0
+   in: 0, out: 1 cmd: y
+          pre before close: 5
+   g_status **: 2
+************ ************ ************
+
+**get input: echo er | exit 2
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: 2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: er
+
+**Filling tab: add line 1: exit
+
+**Filling tab: add line 1: 2
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: er
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: er
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: exit
+
+**get cmd: 2
+
+---fill last cmd: 
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: exit
+
+++token 2: value: 2, type: 0
+   in: 0, out: 1 cmd: 2
+          pre before close: 5
+   g_status **: 2
+************ ************ ************
+
+**get input: echo $?
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $?
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: $?
+   g_status **: 0
+************ ************ ************
+
+**get input: echo ii
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: ii, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: ii
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: ii
+   g_status **: 0
+************ ************ ************
+
+**get input: echo $?
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $?
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: $?
+   g_status **: 0
+************ ************ ************
+
+**get input: echo op $? ok $noenv
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: op, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ok, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: $noenv, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: op
+
+**Filling tab: add line 0: $?
+
+**Filling tab: add line 0: ok
+
+**Filling tab: add line 0: $noenv
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: op
+
+**get cmd: $?
+
+**get cmd: ok
+
+**get cmd: $noenv
+   g_status **: 0
+************ ************ ************
+
+**get input: echo op $? ok $noenv
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: op, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ok, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: $noenv, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: op
+
+**Filling tab: add line 0: $?
+
+**Filling tab: add line 0: ok
+
+**Filling tab: add line 0: $noenv
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: op
+
+**get cmd: $?
+
+**get cmd: ok
+
+**get cmd: $noenv
+   g_status **: 0
+************ ************ ************
+
+**get input: exit -433245265
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: -433245265, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: -433245265
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+
+**get cmd: -433245265
+exit (with signal: 175)
+************ ************ ************
+
+**get input: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**add lexer succeed:
+
+++token 1: value: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+   g_status **: 0
+************ ************ ************
+
+**get input: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex out1 ls ls out2
+
+**add lexer succeed:
+
+++token 1: value: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: out1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: out2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**Filling tab: add line 0: out1
+
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: out2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**get cmd: out1
+
+**get cmd: ls
+
+**get cmd: ls
+
+**get cmd: out2
+   g_status **: 0
+************ ************ ************
+
+**get input: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex a ls ls b
+
+**add lexer succeed:
+
+++token 1: value: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**Filling tab: add line 0: a
+
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**get cmd: a
+
+**get cmd: ls
+
+**get cmd: ls
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: cat b
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: cat a
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: a
+   g_status **: 0
+************ ************ ************
+
+**get input: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex here_doc ok cat cat b
+
+**add lexer succeed:
+
+++token 1: value: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: here_doc, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ok, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**Filling tab: add line 0: here_doc
+
+**Filling tab: add line 0: ok
+
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**get cmd: here_doc
+
+**get cmd: ok
+
+**get cmd: cat
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: cat b
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: cat a
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: a, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: a
+   g_status **: 0
+************ ************ ************
+
+**get input: cat b
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex here_doc ok cat cat b
+
+**add lexer succeed:
+
+++token 1: value: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: here_doc, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: ok, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**Filling tab: add line 0: here_doc
+
+**Filling tab: add line 0: ok
+
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: /home/layang/42Cursus/Isdouglas_cursus/05_Pipex_bonus/pipex
+
+**get cmd: here_doc
+
+**get cmd: ok
+
+**get cmd: cat
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: cat b
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: b, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: b
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: b
+   g_status **: 0
+************ ************ ************
+
+**get input: exit r
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: r, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: r
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+
+**get cmd: r
+exit: numeric argument required
+exit (with signal: 2)
+************ ************ ************
+
+**get input: echo op $? ok $noenv
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: op, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: ok, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: $noenv, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: op
+
+**Filling tab: add line 0: $?
+
+**Filling tab: add line 0: ok
+
+**Filling tab: add line 0: $noenv
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: op
+
+**get cmd: $?
+
+**get cmd: ok
+
+**get cmd: $noenv
+   g_status **: 0
+************ ************ ************
+
+**get input: echo er | exit 2
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: 2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: er
+
+**Filling tab: add line 1: exit
+
+**Filling tab: add line 1: 2
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: er
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: er, type: 0
+   in: 0, out: 1 cmd: er
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: exit
+
+**get cmd: 2
+
+---fill last cmd: 
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: exit
+
+++token 2: value: 2, type: 0
+   in: 0, out: 1 cmd: 2
+          pre before close: 5
+   g_status **: 2
+************ ************ ************
+
+**get input: echo $?
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $?, type: 6
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $?
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: $?
+   g_status **: 0

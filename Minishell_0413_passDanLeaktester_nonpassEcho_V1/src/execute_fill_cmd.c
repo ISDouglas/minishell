@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/06 11:29:53 by layang            #+#    #+#             */
-/*   Updated: 2025/04/13 21:17:45 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/14 08:58:13 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_shift_in_out(t_token	**re, t_token_type t, t_mini	*mi)
 		if ((*re)->infile == -1 && access((*re)->value, F_OK) == 0
 			&& access((*re)->value, R_OK) == -1)
 				(*re)->infile = open("/dev/null", O_RDONLY);
-		ft_file_ctr((*re)->infile, 0,  "minishell: open failed", mi);
+		ft_file_ctr((*re)->infile, 0, "minishell: open failed", mi);
 	}
 	else if (t == REDIRECT_OUT)
 	{
@@ -53,7 +53,7 @@ static void	ft_do_here_doc(t_token	**heredoc, int heredoc_fd)
 {
 	size_t	len;
 	char	*line;
-	
+
 	signal(SIGQUIT, SIG_IGN);
 	while (1)
 	{
@@ -72,7 +72,7 @@ static void	ft_do_here_doc(t_token	**heredoc, int heredoc_fd)
 	}
 	close(heredoc_fd);
 }
-	
+
 //here_doc need to silence sig SIGQUIT (ctrl-\)
 void	ft_here_doc(t_token	**heredoc, t_mini	*mi)
 {
@@ -91,19 +91,24 @@ void	ft_here_doc(t_token	**heredoc, t_mini	*mi)
 	*heredoc = (*heredoc)->next;
 }
 
-void	ft_add_cmd(t_mini	*mini, t_token	**cmd, t_token_type	type)
+void	ft_add_cmd(t_mini *mini, t_token **cmd, t_token_type type)
 {
 	char	*str;
 
 	if (type == WORD || type == ENV_VAR_SQUOTE)
 		(*cmd)->cmd = ft_strdup((*cmd)->value);
-	if (type == ENV_VAR)
+	else if (type == ENV_VAR)
 	{
-		str = ft_getenv(mini->env, (*cmd)->value + 1);
-		if (str == NULL)
-			(*cmd)->cmd = ft_strdup((*cmd)->value);
+		if (ft_strcmp((*cmd)->value + 1, "?") == 0)
+			(*cmd)->cmd = ft_itoa(g_status); 
 		else
-			(*cmd)->cmd = ft_strdup(str);
+		{
+			str = ft_getenv(mini->env, (*cmd)->value + 1);
+			if (str == NULL)
+				(*cmd)->cmd = ft_strdup((*cmd)->value);
+			else
+				(*cmd)->cmd = ft_strdup(str);
+		}
 	}
 	ft_pass_in_out(cmd);
 	*cmd = (*cmd)->next;

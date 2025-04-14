@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/13 21:27:38 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/14 08:59:34 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@
 1: export without =: leaks (only export with "=" will be accept by env, but not fro export)
 	export hi hi= hi=hello hello
 
-***(lNICO on 0413) modiify files fot echo
+***(lNICO on 0413) modify files for echo
 1: minishell.h add token_type ENV_VAR_SQUOTE, new protoype ft_echo.c
 2: modify ft_add_cmd in execute_fill_cmd.c
 3: modify echo.c
 4: modify ft_is_built_in in execute_built_in.c
 5: modify ft_handle_quote in lexer.c
 Must we add ENV_VAR_SQUOTE in ft_syntax_err_ctr in ft_error_ctr.c ????
+***(lNICO on 0414) 
+1 : modify ft_add_cmd in execute_fill_cmd.c for $?
 */
 
 
@@ -44,7 +46,7 @@ Must we add ENV_VAR_SQUOTE in ft_syntax_err_ctr in ft_error_ctr.c ????
 # include <string.h>
 # include "../Libft/libft.h"
 # include <limits.h>
-# include <wait.h>
+//# include <wait.h>
 
 /*****************************************************************************
  *  
@@ -126,12 +128,12 @@ extern int g_status;
  *  				add this line otherwise error occured on MACOS
  *  
  *****************************************************************************/
-//#if __linux__
-//	# include <wait.h>
-//#endif
-//#if __APPLE__
-//	extern int rl_replace_line(const char *text, int i);
-//#endif
+#if __linux__
+	# include <wait.h>
+#endif
+#if __APPLE__
+	extern int rl_replace_line(const char *text, int i);
+#endif
 
 /*****************************************************************************
  *  

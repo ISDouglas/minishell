@@ -57,6 +57,7 @@ LIBFT_SRC = \
 	$(LIBFT_DIR)/ft_strjoin.c \
 	$(LIBFT_DIR)/ft_putchar_fd.c \
 	$(LIBFT_DIR)/ft_putnbr_fd.c \
+	$(LIBFT_DIR)/ft_itoa.c \
 	$(LIBFT_DIR)/get_next_line_lan.c
 
 

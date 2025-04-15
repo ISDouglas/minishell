@@ -1,0 +1,134 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexer_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/19 11:02:33 by nimorel           #+#    #+#             */
+/*   Updated: 2025/04/15 17:39:46 by nimorel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "minishell.h"
+
+void	ft_free_tokens(t_token	**tokens)
+{
+	t_token	*tmp;
+
+	if (!tokens || !*tokens)
+		return ;
+	while (*tokens)
+	{
+		tmp = *tokens;
+		if (tmp->value)
+		{
+			free(tmp->value);
+			tmp->value = NULL;
+		}
+		if (tmp->cmd)
+		{
+			free(tmp->cmd);
+			tmp->cmd = NULL;
+		}
+		*tokens = (*tokens)->next;
+		free(tmp);
+	}
+	*tokens = NULL;
+}
+
+t_token	*ft_create_token(char	*value, t_token_type type)
+{
+	t_token	*token;
+
+	token = malloc(sizeof(t_token));
+	if (!token)
+		return (NULL);
+	token->value = ft_strdup(value);
+	if (!token->value)
+	{
+		free(token);
+		return (NULL);
+	}
+	token->type = type;
+	token->infile = STDIN_FILENO;
+	token->outfile = STDOUT_FILENO;
+	token->cmd = NULL;
+	token->next = NULL;
+	return (token);
+}
+
+void	ft_add_token(t_token	**tokens, t_token	*new_token)
+{
+	t_token	*current;
+
+	if (!new_token)
+		return ;
+	new_token->next = NULL;
+	if (!*tokens)
+	{
+		*tokens = new_token;
+		return ;
+	}
+	current = *tokens;
+	while (current->next)
+		current = current->next;
+	current->next = new_token;
+}
+
+t_token_type	ft_get_operator_type(char c, char next_c)
+{
+	if (c == '&' && next_c == '&')
+		return (AND);
+	if (c == '|' && next_c == '|')
+		return (OR);
+	if (c == '|')
+		return (PIPE);
+	if (c == '<' && next_c == '<')
+		return (HEREDOC);
+	if (c == '>' && next_c == '>')
+		return (APPEND);
+	if (c == '<')
+		return (REDIRECT_IN);
+	if (c == '>')
+		return (REDIRECT_OUT);
+	if (c == '$')
+		return (ENV_VAR);
+	return (WORD);
+}
+
+void	ft_handle_word(const char *input, size_t *i, t_token **tok, t_env **env)
+{
+	int		start;
+	int		len;
+	char	*word;
+	char	*env_value;
+
+	word = NULL;
+	start = *i;
+	while (input[*i] && !ft_isspace(input[*i]) && !ft_strchr("|<>", input[*i]))
+		(*i)++;
+	len = *i - start;
+	if (input[start] == '$')
+	{
+		env_value = ft_getenv(*env, &input[start + 1]);
+		if (env_value)
+		{
+			word = ft_strdup(env_value);
+			if (!word)
+				return ;
+			ft_add_token(tok, ft_create_token(word, WORD));
+		}
+	}
+	else
+	{
+		word = malloc(len + 1);
+		if (!word)
+			return ;
+		ft_memcpy(word, &input[start], len);
+		word[len] = '\0';
+		ft_add_token(tok, ft_create_token(word, WORD));
+	}
+}
+
+//lack & in bonus

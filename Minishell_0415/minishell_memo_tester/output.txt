@@ -1,0 +1,4 @@
+Commande: true || echo aaa && echo bbb
+./tests.sh: line 28: ./minishell: No such file or directory
+-----------------------
+

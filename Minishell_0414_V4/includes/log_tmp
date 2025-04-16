@@ -1,0 +1,794 @@
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+len: 1
+pass char:
+=
+result after char: =
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: =, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: =
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+**get cmd: =
+   g_status **: 2
+************ ************ ************
+
+**get input: exit
+len: 4
+pass char:
+e
+result after char: e
+pass char:
+x
+result after char: ex
+pass char:
+i
+result after char: exi
+pass char:
+t
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+exit (with signal: 2)
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+len: 1
+pass char:
+
+result after char: 
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: , type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: 
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+**get cmd: 
+   g_status **: 2
+************ ************ ************
+
+**get input: exit
+len: 4
+pass char:
+e
+result after char: e
+pass char:
+x
+result after char: ex
+pass char:
+i
+result after char: exi
+pass char:
+t
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+exit (with signal: 2)
+************ ************ ************
+
+**get input: pwd
+len: 3
+pass char:
+p
+result after char: p
+pass char:
+w
+result after char: pw
+pass char:
+d
+result after char: pwd
+
+**add lexer succeed:
+
+++token 1: value: pwd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+len: 1
+pass char:
+
+result after char: 
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: , type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: 
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+**get cmd: 
+   g_status **: 2
+************ ************ ************
+
+**get input: exit
+len: 4
+pass char:
+e
+result after char: e
+pass char:
+x
+result after char: ex
+pass char:
+i
+result after char: exi
+pass char:
+t
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+exit (with signal: 2)
+************ ************ ************
+
+**get input: pwd
+len: 3
+pass char:
+p
+result after char: p
+pass char:
+w
+result after char: pw
+pass char:
+d
+result after char: pwd
+
+**add lexer succeed:
+
+++token 1: value: pwd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: cd include
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 7
+pass char:
+i
+result after char: i
+pass char:
+n
+result after char: in
+pass char:
+c
+result after char: inc
+pass char:
+l
+result after char: incl
+pass char:
+u
+result after char: inclu
+pass char:
+d
+result after char: includ
+pass char:
+e
+result after char: include
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: include, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: include
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: include
+   g_status **: 1
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: cd includes
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 8
+pass char:
+i
+result after char: i
+pass char:
+n
+result after char: in
+pass char:
+c
+result after char: inc
+pass char:
+l
+result after char: incl
+pass char:
+u
+result after char: inclu
+pass char:
+d
+result after char: includ
+pass char:
+e
+result after char: include
+pass char:
+s
+result after char: includes
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: includes, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: includes
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: includes
+   g_status **: 1
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: pwd
+len: 3
+pass char:
+p
+result after char: p
+pass char:
+w
+result after char: pw
+pass char:
+d
+result after char: pwd
+
+**add lexer succeed:
+
+++token 1: value: pwd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: cd ..
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 2
+pass char:
+.
+result after char: .
+pass char:
+.
+result after char: ..
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: .., type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: ..
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: ..
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $HOME
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 5
+var: HOME
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: /home/nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: /home/nimorel
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: /home/nimorel
+cd success.
+   g_status **: 0
+************ ************ ************
+
+**get input: pwd
+len: 3
+pass char:
+p
+result after char: p
+pass char:
+w
+result after char: pw
+pass char:
+d
+result after char: pwd
+
+**add lexer succeed:
+
+++token 1: value: pwd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: pwd
+   g_status **: 0
+************ ************ ************
+
+**get input: cd $USER
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 5
+var: USER
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: nimorel
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: nimorel
+   g_status **: 1
+************ ************ ************
+
+**get input: cd in
+len: 2
+pass char:
+c
+result after char: c
+pass char:
+d
+result after char: cd
+len: 2
+pass char:
+i
+result after char: i
+pass char:
+n
+result after char: in
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: in, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: in
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: in
+   g_status **: 1
+************ ************ ************
+
+**get input: ls
+len: 2
+pass char:
+l
+result after char: l
+pass char:
+s
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+   g_status **: 0
+************ ************ ************
+
+**get input: exit
+len: 4
+pass char:
+e
+result after char: e
+pass char:
+x
+result after char: ex
+pass char:
+i
+result after char: exi
+pass char:
+t
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: exit
+exit (with signal: 0)

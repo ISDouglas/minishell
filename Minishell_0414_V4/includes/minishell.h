@@ -142,8 +142,8 @@ int 			ft_lexer(t_mini	*mini);
 t_token			*ft_create_token(char *value, t_token_type type);
 void			ft_add_token(t_token **tokens, t_token *new_token);
 t_token_type	ft_get_operator_type(char c, char next_c);
-char			*ft_get_dquote(const char *d_str, size_t	len, t_env	*env);
-void			ft_handle_word(const char *input, size_t *i, t_token **tokens);
+char			*ft_get_dquote(const char *d_str, size_t len, t_env	*env);
+void			ft_handle_word(const char *input, size_t *i, t_mini *mini);
 
 /*  lexer_exe_unit.c 5*/
 int				ft_strcmp(const char *s1, const char *s2);
@@ -152,10 +152,11 @@ void			ft_fill_tab(t_mini *mini);
 int				ft_fill_exe_tab(t_mini	*mini);
 
 /* lexer_dquote.c 4*/
-void	dquote_pass_dollar(const char	*s,char	**re, char	**n, t_env	*e,
-	size_t	*i);
-void	dquote_pass_char(char	**re, char	**new_re, char c, size_t	*i);
-char    *dquote_last_dollar(char    *re, char  *new_re);
+void			dquote_pass_dollar(const char	*s,char	**re, char	**n,
+				t_env	*e, size_t	*i);
+void			dquote_pass_char(char	**re, char	**new_re, char c,
+				size_t	*i);
+char    		*dquote_last_dollar(char    *re, char  *new_re);
 
 /* utils.c 2*/
 int				ft_isspace(int c);

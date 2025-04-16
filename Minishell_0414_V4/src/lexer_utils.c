@@ -72,13 +72,12 @@ t_token_type	ft_get_operator_type(char c, char next_c)
 	return (WORD);
 }
 
-
-char	*ft_get_dquote(const char *d_str, size_t	len, t_env	*env)
+char	*ft_get_dquote(const char *d_str, size_t len, t_env	*env)
 {
 	size_t	i;
 	char	*result;
 	char	*new_re;
-	
+
 	i = 0;
 	if (len == 0)
 		return (ft_strdup(""));
@@ -97,32 +96,23 @@ char	*ft_get_dquote(const char *d_str, size_t	len, t_env	*env)
 				dquote_pass_dollar(d_str, &result, &new_re, env, &i);
 		}
 		else
-		{   
-			printf("pass char:\n");
-			write(1, &d_str[i], 1);
-			write(1, "\n", 1);
 			dquote_pass_char(&result, &new_re, d_str[i], &i);
-		}
 	}
 	return (result);
 }
 
-void	ft_handle_word(const char	*input, size_t *i, t_token	**tokens)
+void	ft_handle_word(const char	*input, size_t *i, t_mini *mini)
 {
 	int		start;
-	int		len;
 	char	*word;
 
 	start = *i;
 	while (input[*i] && !ft_isspace(input[*i]) && !ft_strchr("|<>", input[*i]))
 		(*i)++;
-	len = *i - start;
-	word = malloc(len + 1);
+	word = ft_get_dquote(input + start, *i - start, mini->env);
 	if (!word)
 		return ;
-	ft_memcpy(word, &input[start], len);
-	word[len] = '\0';
-	ft_add_token(tokens, ft_create_token(word, WORD));
+	ft_add_token(&mini->lexer, ft_create_token(word, WORD));
 	free(word);
 }
 

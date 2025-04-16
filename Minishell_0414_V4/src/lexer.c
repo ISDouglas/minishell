@@ -55,35 +55,6 @@ static void	ft_handle_quote(const char *input, size_t *i, t_token **tokens)
 		perror("Error : quote not closed.\n");
 }
 
-/* static void	ft_handle_dquote(const char *input, size_t *i, t_token **tokens)
-{
-	int		start;
-	int		len;
-	char	*quoted_word;
-
-	start = ++(*i);
-	while (input[*i] && input[*i] != '"')
-		(*i)++;
-	if (input[*i] == '"')
-	{
-		len = *i - start;
-		quoted_word = malloc(len + 1);
-		if (!quoted_word)
-			return ;
-		ft_memcpy(quoted_word, &input[start], len);
-		quoted_word[len] = '\0';
-		if ((ft_strchr(quoted_word, '$') && !ft_strchr(quoted_word, '\'')))
-			ft_add_token(tokens, ft_create_token(quoted_word, ENV_VAR));
-		else
-			ft_add_token(tokens, ft_create_token(quoted_word, WORD));
-		free(quoted_word);
-		(*i)++;
-	}
-	else
-		perror("Error : double quote not closed.\n");
-} */
-
-//quoted_word = ft_get_dquote();
 static void	ft_handle_dquote(const char *input, size_t *i, t_mini *mini)
 {
 	size_t	start;
@@ -95,7 +66,6 @@ static void	ft_handle_dquote(const char *input, size_t *i, t_mini *mini)
 	if (input[*i] == '"')
 	{
 		quoted_word = ft_get_dquote(input + start, *i - start, mini->env);
-		printf("quoted_word: %s\n", quoted_word);
 		if (!quoted_word)
 			return ;
 		ft_add_token(&mini->lexer, ft_create_token(quoted_word, WORD));
@@ -104,25 +74,6 @@ static void	ft_handle_dquote(const char *input, size_t *i, t_mini *mini)
 	}
 	else
 		perror("Error : double quote not closed.\n");
-}
-
-static void	ft_handle_env_var(const char *input, size_t *i, t_token **tokens)
-{
-	int		start;
-	int		len;
-	char	*word;
-
-	start = (*i)++;
-	while (input[*i] && !ft_isspace(input[*i]) && !ft_strchr("|<>", input[*i]))
-		(*i)++;
-	len = *i - start;
-	word = malloc(len + 1);
-	if (!word)
-		return ;
-	ft_memcpy(word, &input[start], len);
-	word[len] = '\0';
-	ft_add_token(tokens, ft_create_token(word, ENV_VAR));
-	free(word);
 }
 
 int	ft_lexer(t_mini	*mini)
@@ -140,10 +91,8 @@ int	ft_lexer(t_mini	*mini)
 			ft_handle_quote(mini->input, &i, &mini->lexer);
 		else if (mini->input[i] == '"')
 			ft_handle_dquote(mini->input, &i, mini);
-		else if (mini->input[i] == '$')
-			ft_handle_env_var(mini->input, &i, &mini->lexer);
 		else
-			ft_handle_word(mini->input, &i, &mini->lexer);
+			ft_handle_word(mini->input, &i, mini);
 	}
 	printf("\n**add lexer succeed:\n");
 	ft_print_token(mini->lexer);

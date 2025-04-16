@@ -57,5 +57,5 @@ int	ft_cd(t_token *tokens, t_env *env)
 	}
 	else
 		free(oldpwd);
-	return (printf("cd success.\n"), SUCCESS);
+	return (SUCCESS);
 }

@@ -67,27 +67,19 @@ void	dquote_pass_dollar(const char	*s,char	**re, char	**n, t_env	*e,
 	len_var = extract_var_len(s + *i + 1, var);
 	printf("var: %s\n", var);
 	if (len_var == 0)
-	{
 		*n = ft_strjoin(*re, "$");
-		free(*re);
-		*re = *n;
-	}
 	else if(ft_strcmp(var, "?") == 0)
-	{
 		*n = ft_strjoin(*re, ft_itoa(g_status));
-		free(*re);
-		*re = *n;
-	}
 	else
 	{
 		env_var = ft_getenv(e, var);
 		if (env_var)
-		{
 			*n = ft_strjoin(*re, env_var);
-			free(*re);
-			*re = *n;
-		}
+		else
+			*n = ft_strdup(*re);
 	}
+	free(*re);
+	*re = *n;
 	*i = *i + len_var + 1;
 }
 

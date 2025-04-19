@@ -2290,3 +2290,317 @@ Until line 1, finish fill_tab. Executing>>>>-------
 
 **get cmd: exit
 exit (with signal: 0)
+************ ************ ************
+
+**get input: echo "$ $? $USER $yy" | cat -e
+len: 4
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+len: 14
+var: 
+result after char: $ 
+var: ?
+result after char: $ 0 
+var: USER
+result after char: $ 0 lanx 
+var: yy
+len: 3
+result after char: c
+result after char: ca
+result after char: cat
+len: 2
+result after char: -
+result after char: -e
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $ 0 lanx , type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: -e, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $ 0 lanx 
+
+**Filling tab: add line 1: cat
+
+**Filling tab: add line 1: -e
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: $ 0 lanx 
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: $ 0 lanx , type: 0
+   in: 0, out: 1 cmd: $ 0 lanx 
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: cat
+
+**get cmd: -e
+
+---fill last cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+
+++token 2: value: -e, type: 0
+   in: 0, out: 1 cmd: -e
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: echo $ $? $USER $yy | cat -e
+len: 4
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+len: 1
+len: 2
+var: ?
+len: 5
+var: USER
+len: 3
+var: yy
+len: 3
+result after char: c
+result after char: ca
+result after char: cat
+len: 2
+result after char: -
+result after char: -e
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: 0, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: lanx, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: , type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 7: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 8: value: -e, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $
+
+**Filling tab: add line 0: 0
+
+**Filling tab: add line 0: lanx
+
+**Filling tab: add line 0: 
+
+**Filling tab: add line 1: cat
+
+**Filling tab: add line 1: -e
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: $
+
+**get cmd: 0
+
+**get cmd: lanx
+
+**get cmd: 
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: $, type: 0
+   in: 0, out: 1 cmd: $
+
+++token 3: value: 0, type: 0
+   in: 0, out: 1 cmd: 0
+
+++token 4: value: lanx, type: 0
+   in: 0, out: 1 cmd: lanx
+
+++token 5: value: , type: 0
+   in: 0, out: 1 cmd: 
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: cat
+
+**get cmd: -e
+
+---fill last cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+
+++token 2: value: -e, type: 0
+   in: 0, out: 1 cmd: -e
+          pre before close: 5
+   g_status **: 0
+************ ************ ************
+
+**get input: echo $ $? $USER "" | cat -e
+len: 4
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+len: 1
+len: 2
+var: ?
+len: 5
+var: USER
+len: 3
+result after char: c
+result after char: ca
+result after char: cat
+len: 2
+result after char: -
+result after char: -e
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: $, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: 0, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: lanx, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: , type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 7: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 8: value: -e, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: $
+
+**Filling tab: add line 0: 0
+
+**Filling tab: add line 0: lanx
+
+**Filling tab: add line 0: 
+
+**Filling tab: add line 1: cat
+
+**Filling tab: add line 1: -e
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+
+**get cmd: echo
+
+**get cmd: $
+
+**get cmd: 0
+
+**get cmd: lanx
+
+**get cmd: 
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo
+
+++token 2: value: $, type: 0
+   in: 0, out: 1 cmd: $
+
+++token 3: value: 0, type: 0
+   in: 0, out: 1 cmd: 0
+
+++token 4: value: lanx, type: 0
+   in: 0, out: 1 cmd: lanx
+
+++token 5: value: , type: 0
+   in: 0, out: 1 cmd: 
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+   g_status **: 0
+
+**get cmd: cat
+
+**get cmd: -e
+
+---fill last cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat
+
+++token 2: value: -e, type: 0
+   in: 0, out: 1 cmd: -e
+          pre before close: 5
+   g_status **: 0

@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 08:47:36 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/20 16:57:15 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/20 18:30:34 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,11 +93,8 @@ int	ft_lexer(t_mini	*mini)
 			ft_handle_quote(mini->input, &i, &mini->lexer);
 		else if (mini->input[i] == '"')
 			ft_handle_dquote(mini->input, &i, mini);
-		else if (ft_strchr("*", mini->input[i]))
-		{
-			printf("Calling ft_handle_wildcard with input: %s\n", &mini->input[i]);
+		else if (ft_strchr(&mini->input[i], '*'))
 			ft_handle_wildcard(mini->input, &i, mini);
-		}
 		else
 			ft_handle_word(mini->input, &i, mini);
 	}

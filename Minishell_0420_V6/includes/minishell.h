@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/19 15:08:18 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/20 18:32:59 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@
 ***(lan on 0411)TEST ON memory leaks:
 1: export without =: leaks (only export with "=" will be accept by env, but not fro export)
 	export hi hi= hi=hello hello
-		
+
+	***(Nico on0420) Wildcard handle
+1: create ft_handle_wildcard function
+2: modif lexer.c to add ft_handle_wildcard function
 */
 
 

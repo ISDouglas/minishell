@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/19 14:29:38 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/20 16:58:07 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/04/20 18:34:45 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static int	ft_wildcard_process(const char **word, const char **str)
 
 	while (**str)
 	{
-		printf("Comparing: word=%c, str=%c\n", **word, **str);
 		if (**word == '*')
 		{
 			star_index = *word;
@@ -33,7 +32,6 @@ static int	ft_wildcard_process(const char **word, const char **str)
 		}
 		else if (star_index)
 		{
-			printf("Resetting positions: word=%s, str=%s\n", *word, *str);
 			*word = star_index;
 			*str = ++match_index;
 		}

@@ -843,3 +843,80 @@ Until line 1, finish fill_tab. Executing>>>>-------
 Until line 1, finish fill_tab. Executing>>>>-------
 
 **start fill simple cmd_array
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: exit 42
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: 4
+result after char: 42
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 42, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 42
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+************ ************ ************
+
+**get input: exit iugef
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: i
+result after char: iu
+result after char: iug
+result after char: iuge
+result after char: iugef
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: iugef, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: iugef
+
+
+Until line 1, finish fill_tab. Executing>>>>-------

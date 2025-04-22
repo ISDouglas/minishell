@@ -195,3 +195,17 @@ tuoelif
 txt.tuptuo_hsab
 txt.tuptuo_skael
 txt.tuptuo_llehsinim
+txt.kcolb_sdnammoc
+txt.sdnammoc
+txt.PIW_sdnammoc
+1elif
+2elif
+txt.noif_elif
+txt.noif_elif
+tuoelif
+67eliftuo
+77eliftuo
+87eliftuo
+
+:eliftuo
+txt.tuptuo_skael

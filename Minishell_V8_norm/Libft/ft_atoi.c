@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: layang <layang@student.42perpignan.fr>     +#+  +:+       +#+        */
+/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:44:42 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/19 12:23:34 by layang           ###   ########.fr       */
+/*   Updated: 2025/04/22 18:52:11 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	pass_space_sign(const char **str, int *sign)
 	}
 }
 
-int	ft_is_numeric(const char *str) 
+int	ft_is_numeric(const char *str)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ int	ft_is_numeric(const char *str)
 		str++;
 	if (*str == '+' || *str == '-')
 		str++;
-	while (ft_isdigit(*str)) 
+	while (ft_isdigit(*str))
 	{
 		str++;
 		i++;
@@ -76,7 +76,7 @@ int	ft_atoll_code(const char *str, long long *result)
 	int			sign;
 	long long	num;
 	int			digit;
-	
+
 	num = 0;
 	sign = 1;
 	pass_space_sign(&str, &sign);

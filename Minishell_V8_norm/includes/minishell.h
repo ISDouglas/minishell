@@ -112,7 +112,7 @@ l's' '-'l"
  *  					MINISHELL structures and enums
  *  
  *****************************************************************************/
-typedef enum	e_token_type
+typedef enum e_token_type
 {
 	WORD,
 	PIPE,
@@ -125,12 +125,12 @@ typedef enum	e_token_type
 	WILDCARDS
 }	t_token_type;
 
-typedef struct	s_token
+typedef struct s_token
 {
 	char			*value;
 	t_token_type	type;
-	int			infile;
-	int			outfile;
+	int				infile;
+	int				outfile;
 	char			*cmd;
 	struct s_token	*next;
 }					t_token;
@@ -140,23 +140,22 @@ typedef struct s_env
 	char			*name;
 	char			*value;
 	struct s_env	*next;
-} 					t_env;
+}					t_env;
 
 typedef struct s_mini
 {
 	char	*input;
 	t_token	*lexer;
-	t_token **exe_tab;
+	t_token	**exe_tab;
 	int		tab_size;
 	t_env	*env;
-	char 	**array_env;
-	char 	**cmd_array;
+	char	**array_env;
+	char	**cmd_array;
 	int		pre;
 	int		*cpid;
 	int		log_fd;
 	int		stdout_fd;
 }			t_mini;
-
 
 //extern volatile sig_atomic_t	g_status;
 /******************************************************************************
@@ -182,7 +181,7 @@ void			ft_handle_sigint(int sig);
 void			ft_init_mini(t_mini	*mini, char **envp);
 
 /*  lexer.c 5*/
-int 			ft_lexer(t_mini	*mini);
+int				ft_lexer(t_mini	*mini);
 
 /* lexer_utils.c 5*/
 t_token			*ft_create_token(char *value, t_token_type type);
@@ -198,9 +197,9 @@ void			ft_fill_tab(t_mini *mini);
 int				ft_fill_exe_tab(t_mini	*mini);
 
 /* lexer_dquote.c 4*/
-void	dquote_pass_dollar(const char	*s, char	**n, t_env	*e,
-	size_t	*i);
-void	dquote_pass_char(char	**re, char c, size_t	*i);
+void			dquote_pass_dollar(const char *s, char **n, t_env *e,
+					size_t *i);
+void			dquote_pass_char(char	**re, char c, size_t	*i);
 
 /* utils.c 4*/
 void			ft_handle_sigint(int sig);
@@ -214,7 +213,7 @@ void			ft_free_tokens(t_token **tokens);
 void			ft_close_cmd_fd(t_token	*tokens);
 void			ft_free_mini(t_mini *all, int sign);
 
-/* environment.c 5*/   
+/* environment.c 5*/
 t_env			*ft_create_env_node(const char *name, const char *value);
 t_env			*ft_init_env(char **envp);
 void			ft_free_env(t_env **env);
@@ -228,8 +227,8 @@ void			ft_execute(t_mini *mini);
 
 /* execute_pipe.c 5 */
 void			ft_execute_last(t_mini *mini, int i);
-void			ft_execute_child(t_mini *mini, int i, int	pipe_fd[2]);
-void			ft_signal_in_child(t_mini	*mini, int	status);
+void			ft_execute_child(t_mini *mini, int i, int pipe_fd[2]);
+void			ft_signal_in_child(t_mini *mini, int status);
 void			ft_wait_children(t_mini	*mini);
 
 /* execute_cmd.c 5    */
@@ -251,7 +250,7 @@ int				ft_exit(t_mini	*mini, int i);
 int				ft_cmd_type(char *cmd);
 int				ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini);
 int				ft_env(t_env *env);
-void 			ft_cd_export_unset(t_mini *mini, int i);
+void			ft_cd_export_unset(t_mini *mini, int i);
 
 /*  export.c */
 int				ft_export(t_token *tokens, t_env **env, t_mini *mini);
@@ -272,9 +271,9 @@ int				ft_syntax_err_ctr(t_token *lexer);
 void			ft_file_ctr(int fd, int he_fd, char	*msg, t_mini	*mi);
 char			*ft_check_path_validity(t_mini *mini, char *path);
 
-/* ft_test_use.c */
-void			ft_print_token(t_token	*t);    // ** test function
-void			ft_print_cmdarray(char	**cmds);// ** test function
-void			ft_test_log(t_mini  *mini);     // ** test function
+/* ft_test_use.c -> test functions*/
+void			ft_print_token(t_token *t);
+void			ft_print_cmdarray(char **cmds);
+void			ft_test_log(t_mini *mini);
 
 #endif

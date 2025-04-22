@@ -32,13 +32,11 @@ static int	extract_var_len(const char *src, char buf[255])
 void	dquote_pass_dollar(const char *s, char **re, t_env *e, size_t *i)
 {
 	char	var[255];
-	int		len_var;
 	char	*env_var;
 	char	*status;
 	char	*n;
 
-	len_var = extract_var_len(s + *i + 1, var);
-	if (len_var == 0)
+	if (extract_var_len(s + *i + 1, var) == 0)
 		n = ft_strjoin(*re, "$");
 	else if (ft_strcmp(var, "?") == 0)
 	{
@@ -56,7 +54,7 @@ void	dquote_pass_dollar(const char *s, char **re, t_env *e, size_t *i)
 	}
 	free(*re);
 	*re = n;
-	*i = *i + len_var + 1;
+	*i = *i + extract_var_len(s + *i + 1, var) + 1;
 }
 
 void	dquote_pass_char(char	**re, char c, size_t	*i)

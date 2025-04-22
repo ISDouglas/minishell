@@ -1653,3 +1653,530 @@ Until line 1, finish fill_tab. Executing>>>>-------
 **get cmd: |exit$
 
 last-g_status **: 0
+************ ************ ************
+
+**get input: echo "$USER" jhkjbscadf 'User'
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+quoted_word: nimorel
+result after char: j
+result after char: jh
+result after char: jhk
+result after char: jhkj
+result after char: jhkjb
+result after char: jhkjbs
+result after char: jhkjbsc
+result after char: jhkjbsca
+result after char: jhkjbscad
+result after char: jhkjbscadf
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: jhkjbscadf, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: User, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: nimorel
+
+**Filling tab: add line 0: jhkjbscadf
+
+**Filling tab: add line 0: User
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo$
+
+**get cmd: |nimorel$
+
+**get cmd: |jhkjbscadf$
+
+**get cmd: |User$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo $?
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: 0
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo$
+
+**get cmd: |0$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo "$?
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo "$?'
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo "$?"
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+quoted_word: 0
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: 0
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo$
+
+**get cmd: |0$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit$
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: |hj dd
+result after char: h
+result after char: hj
+result after char: d
+result after char: dd
+
+**add lexer succeed:
+
+++token 1: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: hj, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: dd, type: 0
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: echo $USER | >
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit$
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: | cmd
+result after char: c
+result after char: cm
+result after char: cmd
+
+**add lexer succeed:
+
+++token 1: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: cmd, type: 0
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: echo $USER | >
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: & df
+result after char: d
+result after char: df
+
+**add lexer succeed:
+
+++token 1: value: &, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: df, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: &
+
+**Filling tab: add line 0: df
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |&$
+
+**get cmd: |df$
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: && df
+result after char: d
+result after char: df
+
+**add lexer succeed:
+
+++token 1: value: &&, type: 6
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: df, type: 0
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit$
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: |fd
+result after char: f
+result after char: fd
+
+**add lexer succeed:
+
+++token 1: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: fd, type: 0
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit$
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: |
+
+**add lexer succeed:
+
+++token 1: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: >|
+
+**add lexer succeed:
+
+++token 1: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: >
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+          pre before close: 5
+
+---fill last cmd: 
+
+last-g_status **: 139
+************ ************ ************
+
+**get input: kjhsdv >
+result after char: k
+result after char: kj
+result after char: kjh
+result after char: kjhs
+result after char: kjhsd
+result after char: kjhsdv
+
+**add lexer succeed:
+
+++token 1: value: kjhsdv, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+************ ************ ************
+
+**get input: kjbcd <>
+result after char: k
+result after char: kj
+result after char: kjb
+result after char: kjbc
+result after char: kjbcd
+
+**add lexer succeed:
+
+++token 1: value: kjbcd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: <, type: 2
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: kjbcd
+
+**Filling tab: add line 0: <
+
+**Filling tab: add line 0: >
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+last-g_status **: 1
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit$
+
+last-g_status **: 1

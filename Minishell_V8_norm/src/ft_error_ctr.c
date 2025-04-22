@@ -20,6 +20,23 @@ static int	print_syntax_error(char *msg)
 	return (-1);
 }
 
+static int	ft_syntax_err_ctr_type(t_token *curr)
+{
+	if ((curr->type == PIPE || curr->type == AND || curr->type == OR)
+		&& (curr->next->type == PIPE || curr->next->type == AND
+			|| curr->next->type == OR))
+		return (print_syntax_error(curr->next->value));
+	if ((curr->type == REDIRECT_IN || curr->type == REDIRECT_OUT
+			|| curr->type == HEREDOC || curr->type == APPEND)
+		&& curr->next->type != WORD)
+		return (print_syntax_error(curr->next->value));
+	if ((curr->type == REDIRECT_IN || curr->type == REDIRECT_OUT
+			|| curr->type == HEREDOC || curr->type == APPEND)
+		&& curr->next->type != WORD)
+		return (print_syntax_error(curr->next->value));
+	return (0);
+}
+
 int	ft_syntax_err_ctr(t_token *lexer)
 {
 	t_token	*curr;
@@ -31,18 +48,8 @@ int	ft_syntax_err_ctr(t_token *lexer)
 		return (print_syntax_error(curr->value));
 	while (curr && curr->next)
 	{
-		if ((curr->type == PIPE || curr->type == AND || curr->type == OR)
-			&& (curr->next->type == PIPE || curr->next->type == AND
-				|| curr->next->type == OR))
-			return (print_syntax_error(curr->next->value));
-		if ((curr->type == REDIRECT_IN || curr->type == REDIRECT_OUT
-				|| curr->type == HEREDOC || curr->type == APPEND)
-			&& curr->next->type != WORD)
-			return (print_syntax_error(curr->next->value));
-		if ((curr->type == REDIRECT_IN || curr->type == REDIRECT_OUT
-				|| curr->type == HEREDOC || curr->type == APPEND)
-			&& curr->next->type != WORD)
-			return (print_syntax_error(curr->next->value));
+		if (ft_syntax_err_ctr_type(curr))
+			return (1);
 		curr = curr->next;
 	}
 	if (curr->type == PIPE || curr->type == AND || curr->type == OR

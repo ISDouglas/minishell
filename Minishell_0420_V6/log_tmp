@@ -586,3 +586,117 @@ Until line 1, finish fill_tab. Executing>>>>-------
 
 [35;1mminishell[0m[0;33m$ [0m
   last-g_status **: 130
+************ ************ ************
+
+**get input: cd src
+result after char: c
+result after char: cd
+result after char: s
+result after char: sr
+result after char: src
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: src, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: src
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+cd success.
+
+**start fill simple cmd_array
+
+**get cmd: cd
+
+**get cmd: src
+  last-g_status **: 0
+************ ************ ************
+
+**get input: ls *utils.c
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: execute_utils.c, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: free_utils.c, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: lexer_utils.c, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: utils.c, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: execute_utils.c
+
+**Filling tab: add line 0: free_utils.c
+
+**Filling tab: add line 0: lexer_utils.c
+
+**Filling tab: add line 0: utils.c
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+**get cmd: execute_utils.c
+
+**get cmd: free_utils.c
+
+**get cmd: lexer_utils.c
+
+**get cmd: utils.c
+  last-g_status **: 0
+************ ************ ************
+
+**get input: norminette
+result after char: n
+result after char: no
+result after char: nor
+result after char: norm
+result after char: normi
+result after char: normin
+result after char: normine
+result after char: norminet
+result after char: norminett
+result after char: norminette
+
+**add lexer succeed:
+
+++token 1: value: norminette, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: norminette
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: norminette
+  last-g_status **: 1

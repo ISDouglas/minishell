@@ -1,0 +1,118 @@
+************ ************ ************
+
+**get input: # >>asup >>asup cat
+result after char: #
+result after char: a
+result after char: as
+result after char: asu
+result after char: asup
+result after char: a
+result after char: as
+result after char: asu
+result after char: asup
+result after char: c
+result after char: ca
+result after char: cat
+
+**add lexer succeed:
+
+++token 1: value: #, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: asup, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: asup, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: #
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: asup
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: asup
+
+**Filling tab: add line 0: cat
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |#$
+
+**get cmd: |cat$
+************ ************ ************
+
+**get input: # >>asup >>asup cat
+result after char: #
+result after char: a
+result after char: as
+result after char: asu
+result after char: asup
+result after char: a
+result after char: as
+result after char: asu
+result after char: asup
+result after char: c
+result after char: ca
+result after char: cat
+
+**add lexer succeed:
+
+++token 1: value: #, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: asup, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: asup, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: #
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: asup
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: asup
+
+**Filling tab: add line 0: cat
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |#$
+
+**get cmd: |cat$

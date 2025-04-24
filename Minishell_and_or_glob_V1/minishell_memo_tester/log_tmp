@@ -1,0 +1,216 @@
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit 42
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: 4
+result after char: 42
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 42, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 42
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 42
+************ ************ ************
+
+**get input: exit iugef
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: i
+result after char: iu
+result after char: iug
+result after char: iuge
+result after char: iugef
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: iugef, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: iugef
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: exit 42
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: 4
+result after char: 42
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 42, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 42
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 42
+************ ************ ************
+
+**get input: exit 42hgzef
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: 4
+result after char: 42
+result after char: 42h
+result after char: 42hg
+result after char: 42hgz
+result after char: 42hgze
+result after char: 42hgzef
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 42hgzef, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: 42hgzef
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: exit jhzef
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+result after char: j
+result after char: jh
+result after char: jhz
+result after char: jhze
+result after char: jhzef
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: jhzef, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+**Filling tab: add line 0: jhzef
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: <noexist cat
+result after char: n
+result after char: no
+result after char: noe
+result after char: noex
+result after char: noexi
+result after char: noexis
+result after char: noexist
+result after char: c
+result after char: ca
+result after char: cat
+
+**add lexer succeed:
+
+++token 1: value: <, type: 2
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: noexist, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: <
+
+**Filling tab: add line 0: noexist
+
+**Filling tab: add line 0: cat
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array

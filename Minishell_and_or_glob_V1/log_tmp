@@ -1,0 +1,2378 @@
+************ ************ ************
+
+**get input: ls *.*
+result after char: l
+result after char: ls
+result after char: *
+result after char: *.
+result after char: *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: *.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: *.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls minishell*.*
+result after char: l
+result after char: ls
+result after char: m
+result after char: mi
+result after char: min
+result after char: mini
+result after char: minis
+result after char: minish
+result after char: minishe
+result after char: minishel
+result after char: minishell
+result after char: minishell*
+result after char: minishell*.
+result after char: minishell*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: minishell*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: minishell*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |minishell*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls mini*.*
+result after char: l
+result after char: ls
+result after char: m
+result after char: mi
+result after char: min
+result after char: mini
+result after char: mini*
+result after char: mini*.
+result after char: mini*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: mini*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: mini*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |mini*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls
+result after char: l
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: make bonus
+result after char: m
+result after char: ma
+result after char: mak
+result after char: make
+result after char: b
+result after char: bo
+result after char: bon
+result after char: bonu
+result after char: bonus
+
+**add lexer succeed:
+
+++token 1: value: make, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: bonus, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: make
+
+**Filling tab: add line 0: bonus
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |make|
+
+**get cmd: |bonus|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls mini*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: mini*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: mini*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |mini*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls mini*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: minishell_memo_tester, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: minishell_bonus, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: minishell_memo_tester
+
+**Filling tab: add line 0: minishell_bonus
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |minishell_memo_tester|
+
+**get cmd: |minishell_bonus|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*exit
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: *.*exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: *.*exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |*.*exit|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls 
+result after char: l
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ./minishell_memo_tester/
+result after char: .
+result after char: ./
+result after char: ./m
+result after char: ./mi
+result after char: ./min
+result after char: ./mini
+result after char: ./minis
+result after char: ./minish
+result after char: ./minishe
+result after char: ./minishel
+result after char: ./minishell
+result after char: ./minishell_
+result after char: ./minishell_m
+result after char: ./minishell_me
+result after char: ./minishell_mem
+result after char: ./minishell_memo
+result after char: ./minishell_memo_
+result after char: ./minishell_memo_t
+result after char: ./minishell_memo_te
+result after char: ./minishell_memo_tes
+result after char: ./minishell_memo_test
+result after char: ./minishell_memo_teste
+result after char: ./minishell_memo_tester
+result after char: ./minishell_memo_tester/
+
+**add lexer succeed:
+
+++token 1: value: ./minishell_memo_tester/, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./minishell_memo_tester/
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |./minishell_memo_tester/|
+
+last-g_status **: 1
+************ ************ ************
+
+**get input: ./minishell
+result after char: .
+result after char: ./
+result after char: ./m
+result after char: ./mi
+result after char: ./min
+result after char: ./mini
+result after char: ./minis
+result after char: ./minish
+result after char: ./minishe
+result after char: ./minishel
+result after char: ./minishell
+
+**add lexer succeed:
+
+++token 1: value: ./minishell, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./minishell
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |./minishell|
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: [200~./memory_check.sh commands.txt
+result after char: 
+result after char: [
+result after char: [2
+result after char: [20
+result after char: [200
+result after char: [200~
+result after char: [200~.
+result after char: [200~./
+result after char: [200~./m
+result after char: [200~./me
+result after char: [200~./mem
+result after char: [200~./memo
+result after char: [200~./memor
+result after char: [200~./memory
+result after char: [200~./memory_
+result after char: [200~./memory_c
+result after char: [200~./memory_ch
+result after char: [200~./memory_che
+result after char: [200~./memory_chec
+result after char: [200~./memory_check
+result after char: [200~./memory_check.
+result after char: [200~./memory_check.s
+result after char: [200~./memory_check.sh
+result after char: c
+result after char: co
+result after char: com
+result after char: comm
+result after char: comma
+result after char: comman
+result after char: command
+result after char: commands
+result after char: commands.
+result after char: commands.t
+result after char: commands.tx
+result after char: commands.txt
+
+**add lexer succeed:
+
+++token 1: value: [200~./memory_check.sh, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: commands.txt, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: [200~./memory_check.sh
+
+**Filling tab: add line 0: commands.txt
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |[200~./memory_check.sh|
+
+**get cmd: |commands.txt|
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: ./memory_check.sh commands.txt
+result after char: .
+result after char: ./
+result after char: ./m
+result after char: ./me
+result after char: ./mem
+result after char: ./memo
+result after char: ./memor
+result after char: ./memory
+result after char: ./memory_
+result after char: ./memory_c
+result after char: ./memory_ch
+result after char: ./memory_che
+result after char: ./memory_chec
+result after char: ./memory_check
+result after char: ./memory_check.
+result after char: ./memory_check.s
+result after char: ./memory_check.sh
+result after char: c
+result after char: co
+result after char: com
+result after char: comm
+result after char: comma
+result after char: comman
+result after char: command
+result after char: commands
+result after char: commands.
+result after char: commands.t
+result after char: commands.tx
+result after char: commands.txt
+
+**add lexer succeed:
+
+++token 1: value: ./memory_check.sh, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: commands.txt, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./memory_check.sh
+
+**Filling tab: add line 0: commands.txt
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |./memory_check.sh|
+
+**get cmd: |commands.txt|
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: cd minishell_memo_tester/
+result after char: c
+result after char: cd
+result after char: m
+result after char: mi
+result after char: min
+result after char: mini
+result after char: minis
+result after char: minish
+result after char: minishe
+result after char: minishel
+result after char: minishell
+result after char: minishell_
+result after char: minishell_m
+result after char: minishell_me
+result after char: minishell_mem
+result after char: minishell_memo
+result after char: minishell_memo_
+result after char: minishell_memo_t
+result after char: minishell_memo_te
+result after char: minishell_memo_tes
+result after char: minishell_memo_test
+result after char: minishell_memo_teste
+result after char: minishell_memo_tester
+result after char: minishell_memo_tester/
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: minishell_memo_tester/, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: minishell_memo_tester/
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |cd|
+
+**get cmd: |minishell_memo_tester/|
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**get cmd: |cd|
+
+**get cmd: |minishell_memo_tester/|
+************ ************ ************
+
+**get input: ./memory_check.sh commands.txt
+result after char: .
+result after char: ./
+result after char: ./m
+result after char: ./me
+result after char: ./mem
+result after char: ./memo
+result after char: ./memor
+result after char: ./memory
+result after char: ./memory_
+result after char: ./memory_c
+result after char: ./memory_ch
+result after char: ./memory_che
+result after char: ./memory_chec
+result after char: ./memory_check
+result after char: ./memory_check.
+result after char: ./memory_check.s
+result after char: ./memory_check.sh
+result after char: c
+result after char: co
+result after char: com
+result after char: comm
+result after char: comma
+result after char: comman
+result after char: command
+result after char: commands
+result after char: commands.
+result after char: commands.t
+result after char: commands.tx
+result after char: commands.txt
+
+**add lexer succeed:
+
+++token 1: value: ./memory_check.sh, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: commands.txt, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./memory_check.sh
+
+**Filling tab: add line 0: commands.txt
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |./memory_check.sh|
+
+**get cmd: |commands.txt|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls mini*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: mini*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: mini*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |mini*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls mini*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: mini*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: mini*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |mini*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: cd ..
+result after char: c
+result after char: cd
+result after char: .
+result after char: ..
+
+**add lexer succeed:
+
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: .., type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cd
+
+**Filling tab: add line 0: ..
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |cd|
+
+**get cmd: |..|
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**get cmd: |cd|
+
+**get cmd: |..|
+************ ************ ************
+
+**get input: ls
+result after char: l
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ks mini*
+
+**add lexer succeed:
+
+++token 1: value: ks, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: minishell_memo_tester, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: minishell_bonus, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ks
+
+**Filling tab: add line 0: minishell_memo_tester
+
+**Filling tab: add line 0: minishell_bonus
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ks|
+
+**get cmd: |minishell_memo_tester|
+
+**get cmd: |minishell_bonus|
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: ls *.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.* | wc -l
+result after char: w
+result after char: wc
+result after char: -
+result after char: -l
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: wc, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: -l, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+**Filling tab: add line 1: wc
+
+**Filling tab: add line 1: -l
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+
+**get cmd: |ls|
+
+          pre before close: 5
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+---fill child cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: valgrind.supp
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: valgrind_inhome.supp
+
+**get cmd: |wc|
+
+**get cmd: |-l|
+
+---fill last cmd: 
+
+++token 1: value: wc, type: 0
+   in: 0, out: 1 cmd: wc
+
+++token 2: value: -l, type: 0
+   in: 0, out: 1 cmd: -l
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.* | wc -l
+result after char: w
+result after char: wc
+result after char: -
+result after char: -l
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: wc, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: -l, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+**Filling tab: add line 1: wc
+
+**Filling tab: add line 1: -l
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+          pre before close: 5
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+---fill child cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: valgrind.supp
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: valgrind_inhome.supp
+
+**get cmd: |wc|
+
+**get cmd: |-l|
+
+---fill last cmd: 
+
+++token 1: value: wc, type: 0
+   in: 0, out: 1 cmd: wc
+
+++token 2: value: -l, type: 0
+   in: 0, out: 1 cmd: -l
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls *.* | wc -l > file1
+result after char: w
+result after char: wc
+result after char: -
+result after char: -l
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file1
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: |, type: 1
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: wc, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: -l, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 7: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 8: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: valgrind.supp
+
+**Filling tab: add line 0: valgrind_inhome.supp
+
+**Filling tab: add line 1: wc
+
+**Filling tab: add line 1: -l
+
+**Filling tab: add line 1: >
+
+**Filling tab: add line 1: file1
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+          pre before close: 5
+
+**get cmd: |ls|
+
+**get cmd: |valgrind.supp|
+
+**get cmd: |valgrind_inhome.supp|
+
+---fill child cmd: 
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: ls
+
+++token 2: value: valgrind.supp, type: 0
+   in: 0, out: 1 cmd: valgrind.supp
+
+++token 3: value: valgrind_inhome.supp, type: 0
+   in: 0, out: 1 cmd: valgrind_inhome.supp
+
+**get cmd: |wc|
+
+**get cmd: |-l|
+
+---fill last cmd: 
+
+++token 1: value: wc, type: 0
+   in: 0, out: 1 cmd: wc
+
+++token 2: value: -l, type: 0
+   in: 0, out: 1 cmd: -l
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: file1, type: 0
+   in: 0, out: 6 cmd: (null)
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls
+result after char: l
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cat file1
+result after char: c
+result after char: ca
+result after char: cat
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file1
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: file1
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |cat|
+
+**get cmd: |file1|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: rm file1
+result after char: r
+result after char: rm
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file1
+
+**add lexer succeed:
+
+++token 1: value: rm, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: rm
+
+**Filling tab: add line 0: file1
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |rm|
+
+**get cmd: |file1|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo $USER
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: nimorel
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |nimorel|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo toto
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+result after char: t
+result after char: to
+result after char: tot
+result after char: toto
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: toto, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: toto
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |toto|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echo $USER
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: nimorel, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: nimorel
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |nimorel|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls mini*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: mini*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: mini*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |mini*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: pwd
+result after char: p
+result after char: pw
+result after char: pwd
+
+**add lexer succeed:
+
+++token 1: value: pwd, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: pwd
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |pwd|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls
+result after char: l
+result after char: ls
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls min*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: min*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: min*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |min*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: ls min*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: minishell_memo_tester, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: minishell_bonus, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: minishell_memo_tester
+
+**Filling tab: add line 0: minishell_bonus
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |minishell_memo_tester|
+
+**get cmd: |minishell_bonus|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls min*.*
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: min*.*, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: min*.*
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |ls|
+
+**get cmd: |min*.*|
+
+last-g_status **: 2
+************ ************ ************
+
+**get input: echo $?
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: 2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: 2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |2|
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: exit
+result after char: e
+result after char: ex
+result after char: exi
+result after char: exit
+
+**add lexer succeed:
+
+++token 1: value: exit, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: exit
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |exit|
+
+last-g_status **: 0

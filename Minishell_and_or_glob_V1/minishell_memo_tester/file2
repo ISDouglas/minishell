@@ -1,0 +1,324 @@
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+
+**add lexer succeed:
+token: echo, type: 0
+token: test, type: 0
+token: >, type: 3
+token: file1, type: 0
+token: >>, type: 5
+token: file2, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: test
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+
+**add lexer succeed:
+token: echo, type: 0
+token: test, type: 0
+token: >, type: 3
+token: file1, type: 0
+token: >>, type: 5
+token: file2, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: test
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+
+**add lexer succeed:
+token: echo, type: 0
+token: test, type: 0
+token: >, type: 3
+token: file1, type: 0
+token: >>, type: 5
+token: file2, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: test
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+
+**add lexer succeed:
+token: echo, type: 0
+token: test, type: 0
+token: >, type: 3
+token: file1, type: 0
+token: >>, type: 5
+token: file2, type: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: test
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: test, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: file2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: test
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+result after char: t
+result after char: te
+result after char: tes
+result after char: test
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file1
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file2
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: test, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: file2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |test|
+test
+************ ************ ************
+
+**get input: echo test >file1 >> file2
+result after char: e
+result after char: ec
+result after char: ech
+result after char: echo
+result after char: t
+result after char: te
+result after char: tes
+result after char: test
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file1
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: file2
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 2: value: test, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 3: value: >, type: 3
+   in: 0, out: 1 cmd: (null)
+
+++token 4: value: file1, type: 0
+   in: 0, out: 1 cmd: (null)
+
+++token 5: value: >>, type: 5
+   in: 0, out: 1 cmd: (null)
+
+++token 6: value: file2, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: test
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: file1
+
+**Filling tab: add line 0: >>
+
+**Filling tab: add line 0: file2
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: |echo|
+
+**get cmd: |test|

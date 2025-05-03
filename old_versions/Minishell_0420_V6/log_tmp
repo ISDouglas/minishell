@@ -700,3 +700,53 @@ Until line 1, finish fill_tab. Executing>>>>-------
 
 **get cmd: norminette
   last-g_status **: 1
+************ ************ ************
+
+**get input: cat
+result after char: c
+result after char: ca
+result after char: cat
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+  last-g_status **: 0
+************ ************ ************
+
+**get input: cat
+result after char: c
+result after char: ca
+result after char: cat
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null)
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+[35;1mminishell[0m[0;33m$ [0m
+  last-g_status **: 130

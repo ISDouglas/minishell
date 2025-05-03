@@ -6,7 +6,7 @@
 /*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/04/25 14:38:13 by layang           ###   ########.fr       */
+/*   Updated: 2025/05/03 14:44:15 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,54 @@
 # define MINISHELL_BONUS_H
 
 /* 
-For and_or_V0:
-1. Create the new Makefile and minishell_bonus.
+For and_or_V3:
+1: fix problem of cmd
+"
+'
 
-To do:
-fix mem leak in cmd:
-ls *le* *.txt | rev >> file_fion.txt
+2: control firstly all not close quote and dquote before
+	printf the non-closed info and put the g_status = 1;
+	(maybe =0 is better discuss together later)
+	
+3: Add the relative path check: !ft_strchr(path, '/')
+	Makefile
+	Makefile: permission denied
+	correct to:
+	Makefile
+	Makefile: command not found
+	
+4: add lexer_cmd_block.c to treat correctly cmd bound, like:
+	/"bin"/gr'ep ta'ta
+	l's'
+	with bonus:
+	ls 'va'l*'.supp'
+
+5: * in the quotes:
+	$ ls t"*"t.*c
+	should not has result:
+	't*t.c'  'tt.*c'   ttt.c
+	but only has:
+	't*t.c'
+	
+6:
+add squote dquote hanlde block method.
+add main hanlde block wildcards, remove wildcards in ft_lexer
+
+go crazy : 
+**cmd_andor :
+18 false || (echo aaa && false) || echo $?
+24 (ok)
+26 false || (false || echo $?) && echo $?
+
+*
+114
+116
+
+**cmd_pipe: (ok now)
+(ok)81 ls | <infile <infile2 rev | cat >outfile76 >outfile77 -n >outfile78|rev
+(ok)82 ls |rev |>outfile76 > outfile77 <infile <infile2 cat  -n >outfile78| rev 
+(ok)83 ls |<infile2 rev | >outfile77 <infile  >outfile76 cat -n >outfile78|rev
+
 */
 
 /******************************************************************************
@@ -77,13 +119,16 @@ typedef enum e_token_type
 	APPEND,
 	AND,
 	OR,
-	WILDCARDS
+	BRACKET,
+	REV_BRACKET
 }	t_token_type;
 
 typedef struct s_token
 {
 	char			*value;
 	t_token_type	type;
+	size_t			start;
+	int				par_n;
 	int				infile;
 	int				outfile;
 	char			*cmd;
@@ -132,23 +177,27 @@ typedef struct s_mini
  *****************************************************************************/
 /*  minishell.c 5 */
 void			ft_start_animation(void);
-void			ft_handle_sigint(int sig);
 void			ft_init_mini(t_mini	*mini, char **envp);
 
-/*  lexer_bonus.c 4*/
+/*  lexer_bonus.c 5*/
+void			ft_handle_operator(const char *input, size_t *i,
+					t_token **tokens);
+char			*get_dquote_block(const char	*input, size_t *i,
+					t_mini *mini);
+char			*ft_get_dquote(const char *d_str, size_t	len, t_env	*env);
+char			*get_word_block(const char	*in, size_t *i, t_mini *mini);
 int				ft_lexer(t_mini	*mini);
 
-/* lexer_utils.c 5*/
-t_token			*ft_create_token(char *value, t_token_type type);
+/* lexer_utils_bonus.c 5*/
+void			ft_block_init(char	**word, char	**sign_glob);
+t_token			*ft_create_token(char *value, t_token_type type, size_t st);
 void			ft_add_token(t_token **tokens, t_token *new_token);
 t_token_type	ft_get_operator_type(char c, char next_c);
-char			*ft_get_dquote(const char *d_str, size_t	len, t_env	*env);
-void			ft_handle_word(const char	*input, size_t *i, t_mini *mini);
+void			ft_stamp_token(t_token	*tokens);
 
-/*  lexer_exe_unit.c 5*/
-int				ft_strcmp(const char *s1, const char *s2);
+/*  lexer_exe_unit_bonus.c 5*/
 int				ft_count_unit(t_mini	*mini);
-void			ft_fill_tab(t_mini *mini);
+void			ft_fill_tab(t_mini	*mini);
 int				ft_fill_exe_tab(t_mini	*mini);
 
 /* lexer_dquote.c 4*/
@@ -156,11 +205,25 @@ void			dquote_pass_dollar(const char *s, char **n, t_env *e,
 					size_t *i);
 void			dquote_pass_char(char	**re, char c, size_t	*i);
 
-/* lexer_wildcard.c 4*/
-void			ft_handle_wildcard(const char *input, size_t *i, t_mini *mini);
+/* lexer_cmd_block_bonus.c  5*/
+char			*get_squote_block(const char *input, size_t	*i);
+int				word_has_glob(char	*s_glob);
+void			renew_sign_glob(const char	*word, char	**s_glob, int sign);
+void			ft_handle_block(const char *input, size_t *i,
+					t_mini *mini);
 
-/* utils.c 4*/
+/* lexer_wildcard.c 4*/
+int				ft_get_files(const char *word, t_mini *mini, char	*s_glob,
+					size_t j);
+int				reget_files(const char	*word, t_token	**tab_n,
+					char	*s_glob, size_t j);
+
+/* lexer_reread.c*/
+void			ft_tabn_reread(t_mini	*mini, size_t st, int i);
+
+/* utils.c 5*/
 void			ft_handle_sigint(int sig);
+void			ft_handle_sigint_2(int sig);
 int				ft_isspace(int c);
 int				ft_is_empty_input(char *input);
 int				ft_link_status(char	*msg, int value);
@@ -177,17 +240,23 @@ t_env			*ft_init_env(char **envp);
 void			ft_free_env(t_env **env);
 char			*ft_getenv(t_env *env, const char *name);
 
-/* execute.c 5 */
+/* execute_bonus.c 5 */
 void			ft_execute_simple_cmd(t_mini *mini, int i, int sign);
-void			ft_execute_parent(t_mini *mini, int i, int pipe[2], int pid);
-void			ft_execute_unit(t_mini *mini, int i);
+void			ft_execute_parent(t_mini *mini, int i, int pipe[2]);
+void			ft_execute_unit(t_mini *mini, int i, int len);
 void			ft_execute(t_mini *mini);
 
-/* execute_pipe.c 5 */
+/* execute_jump.c 5*/
+int				ft_is_operator(t_token	*cur);
+t_token_type	next_type(t_mini	*mini, int i);
+void			pass_or_jump(t_mini	*mini, int	*i);
+
+/* execute_pipe_bonus.c 5 */
 void			ft_execute_last(t_mini *mini, int i);
 void			ft_execute_child(t_mini *mini, int i, int pipe_fd[2]);
 void			ft_signal_in_child(t_mini *mini, int status);
-void			ft_wait_children(t_mini	*mini);
+void			ft_wait_bonus(t_mini	*mini, int i, int	*len);
+void			ft_wait_children(t_mini	*mini, int len);
 
 /* execute_cmd.c 5    */
 void			ft_fill_cmd(t_token **tokens, t_mini *mini);
@@ -198,16 +267,20 @@ void			ft_shift_in_out(t_token	**re, t_token_type t, t_mini	*mi);
 void			ft_here_doc(t_token	**heredoc, t_mini	*mi);
 void			ft_add_cmd(t_mini	*mini, t_token	**cmd, t_token_type	type);
 
+/* execute_fill_utiles.c  2*/
+void			ft_pass_in_out(t_token	**token);
+int				ft_malloc_array(t_token **tokens, t_mini *mini);
+
 /* execute_utils.c 5*/
+int				ft_cmd_type(char *cmd);
 char			**ft_env_to_array(t_env *env);
 char			*ft_get_path_from_env(t_env *env);
 char			*ft_get_path(char *cmd, t_env *env);
 
-/* execute_built_in.c 5*/
+/* execute_built_in_bonus.c 4*/
 int				ft_exit(t_mini	*mini, int i);
-int				ft_cmd_type(char *cmd);
-int				ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini);
 int				ft_env(t_env *env);
+int				ft_is_built_in(char *cmd, t_token *tokens, t_mini *mini);
 void			ft_cd_export_unset(t_mini *mini, int i);
 
 /*  export.c */
@@ -225,11 +298,18 @@ int				ft_echo(char **cmd_array, t_mini *mini);
 int				ft_unset(t_token *tokens, t_env **env);
 
 /* ft_error_ctr.c 5*/
+int				print_syntax_error(char *msg);
+int				ft_open_quote(t_mini	*mini);
 int				ft_syntax_err_ctr(t_token *lexer);
+
+/* ft_file_path_ctr.c 2*/
 void			ft_file_ctr(int fd, int he_fd, char	*msg, t_mini	*mi);
 char			*ft_check_path_validity(t_mini *mini, char *path);
 
-/* ft_test_use.c -> test functions*/
+/* ft_syntax_err.c 5*/
+int				check_parentheses_syntax(t_token	*lexer);
+
+/* ft_log_use.c -> test functions 3*/
 void			ft_print_token(t_token *t);
 void			ft_print_cmdarray(char **cmds);
 void			ft_test_log(t_mini *mini);

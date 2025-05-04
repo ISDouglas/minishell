@@ -1,0 +1,1866 @@
+************ ************ ************
+
+**get input: false || echoq o | expr $? + $?
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+++token 3: value: echoq, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 9
+
+++token 4: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+++token 5: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 17
+
+++token 6: value: expr, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 19
+
+++token 7: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 24
+
+++token 8: value: +, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 27
+
+++token 9: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+*nb of unit: 3
+
+*Tab size: 5
+**Filling tab: add line 0: false
+**Filling tab op: add line 1: ||
+**Filling tab: add line 2: echoq
+**Filling tab: add line 2: o
+**Filling tab op: add line 3: |
+**Filling tab: add line 4: expr
+**Filling tab: add line 4: 0
+**Filling tab: add line 4: +
+**Filling tab: add line 4: 0
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: false
+
+last-g_status **: 1
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+----------pre before close: 5
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: echoq, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 9
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+**get cmd: expr
+
+**  tab-line 4 after REREAD:
+
+**get cmd: 0
+  
+
+**get cmd: +
+++token 1: value: expr, type: 0
+
+**get cmd: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 19
+
+---fill last cmd, line 4: 
+
+++token 2: value: 1, type: 0
+
+   in: 0, out: 1 cmd: (null) par_n: 0
+++token 1: value: expr, type: 0
+start index: 24
+   in: 0, out: 1 cmd: expr par_n: 0
+
+start index: 19
+++token 3: value: +, type: 0
+
+   in: 0, out: 1 cmd: (null) par_n: 0
+++token 2: value: 0, type: 0
+start index: 27
+   in: 0, out: 1 cmd: 0 par_n: 0
+
+start index: 24
+++token 4: value: 1, type: 0
+
+   in: 0, out: 1 cmd: (null) par_n: 0
+++token 3: value: +, type: 0
+start index: 29
+   in: 0, out: 1 cmd: + par_n: 0
+
+**get cmd: echoq
+start index: 27
+
+**get cmd: o
+
+
+++token 4: value: 0, type: 0
+---fill child cmd: 
+   in: 0, out: 1 cmd: 0 par_n: 0
+
+start index: 29
+++token 1: value: echoq, type: 0
+   in: 0, out: 1 cmd: echoq par_n: 0
+start index: 9
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: o par_n: 0
+start index: 15
+
+last-g_status **: 1
+************ ************ ************
+
+**get input: false || echoq o | expr $? + $?
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+++token 3: value: echoq, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 9
+
+++token 4: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+++token 5: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 17
+
+++token 6: value: expr, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 19
+
+++token 7: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 24
+
+++token 8: value: +, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 27
+
+++token 9: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+*nb of unit: 3
+
+*Tab size: 5
+**Filling tab: add line 0: false
+**Filling tab op: add line 1: ||
+**Filling tab: add line 2: echoq
+**Filling tab: add line 2: o
+**Filling tab op: add line 3: |
+**Filling tab: add line 4: expr
+**Filling tab: add line 4: 0
+**Filling tab: add line 4: +
+**Filling tab: add line 4: 0
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: false
+
+last-g_status **: 1
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: echoq, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 9
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: expr, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 19
+
+++token 2: value: 1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 24
+
+++token 3: value: +, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 27
+
+++token 4: value: 1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+----------pre before close: 5
+
+**get cmd: echoq
+
+**get cmd: o
+
+---fill child cmd: 
+
+++token 1: value: echoq, type: 0
+   in: 0, out: 1 cmd: echoq par_n: 0
+start index: 9
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: o par_n: 0
+start index: 15
+
+**get cmd: expr
+
+**get cmd: 1
+
+**get cmd: +
+
+**get cmd: 1
+
+---fill last cmd, line 4: 
+
+++token 1: value: expr, type: 0
+   in: 0, out: 1 cmd: expr par_n: 0
+start index: 19
+
+++token 2: value: 1, type: 0
+   in: 0, out: 1 cmd: 1 par_n: 0
+start index: 24
+
+++token 3: value: +, type: 0
+   in: 0, out: 1 cmd: + par_n: 0
+start index: 27
+
+++token 4: value: 1, type: 0
+   in: 0, out: 1 cmd: 1 par_n: 0
+start index: 29
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (( echo ggg && false && (echo bbb && echo $?) ) || echo zzz)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 1
+
+++token 3: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 4: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+++token 5: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 13
+
+++token 6: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+++token 7: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 22
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 24
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 25
+
+++token 10: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 30
+
+++token 11: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 35
+
+++token 12: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 37
+
+++token 13: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 42
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 44
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 46
+
+++token 16: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 49
+
+++token 17: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 51
+
+++token 18: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 56
+
+++token 19: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 59
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: ggg
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: false
+**Filling tab op: add line 3: &&
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: bbb
+**Filling tab op: add line 5: &&
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+**Filling tab op: add line 7: ||
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: zzz
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 2: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+**get cmd: echo
+
+**get cmd: ggg
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab-line 8 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 51
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 56
+
+**get cmd: echo
+
+**get cmd: zzz
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (( echo ggg && false && (echo bbb && echo $?) ) || echo zzz)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 1
+
+++token 3: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 4: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+++token 5: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 13
+
+++token 6: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+++token 7: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 22
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 24
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 25
+
+++token 10: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 30
+
+++token 11: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 35
+
+++token 12: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 37
+
+++token 13: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 42
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 44
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 46
+
+++token 16: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 49
+
+++token 17: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 51
+
+++token 18: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 56
+
+++token 19: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 59
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: ggg
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: false
+**Filling tab op: add line 3: &&
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: bbb
+**Filling tab op: add line 5: &&
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+**Filling tab op: add line 7: ||
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: zzz
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 2: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+**get cmd: echo
+
+**get cmd: ggg
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab-line 8 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 51
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 56
+
+**get cmd: echo
+
+**get cmd: zzz
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (( echo ggg && false || echo bbb && echo $? ) || echo zzz)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 1
+
+++token 3: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 4: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+++token 5: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 13
+
+++token 6: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+++token 7: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 22
+
+++token 8: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 24
+
+++token 9: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 29
+
+++token 10: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 34
+
+++token 11: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 36
+
+++token 12: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 41
+
+++token 13: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 44
+
+++token 14: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 47
+
+++token 15: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 49
+
+++token 16: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 54
+
+++token 17: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 57
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: ggg
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: false
+**Filling tab op: add line 3: ||
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: bbb
+**Filling tab op: add line 5: &&
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+**Filling tab op: add line 7: ||
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: zzz
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 2: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+**get cmd: echo
+
+**get cmd: ggg
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 24
+
+++token 2: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 29
+
+**get cmd: echo
+
+**get cmd: bbb
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 36
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 41
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (( echo ggg && true || echo bbb && echo $? ) || echo zzz)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 1
+
+++token 3: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 4: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+++token 5: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 13
+
+++token 6: value: true, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+++token 7: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 21
+
+++token 8: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 23
+
+++token 9: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 28
+
+++token 10: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 33
+
+++token 11: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 35
+
+++token 12: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 40
+
+++token 13: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 43
+
+++token 14: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 46
+
+++token 15: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 48
+
+++token 16: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 53
+
+++token 17: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 56
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: ggg
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: true
+**Filling tab op: add line 3: ||
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: bbb
+**Filling tab op: add line 5: &&
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+**Filling tab op: add line 7: ||
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: zzz
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 2: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+**get cmd: echo
+
+**get cmd: ggg
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: true, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+**get cmd: true
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 35
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 40
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (( echo ggg && true || (echo bbb && echo $?) ) || echo zzz)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 1
+
+++token 3: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 4: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+++token 5: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 13
+
+++token 6: value: true, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+++token 7: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 21
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 23
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 24
+
+++token 10: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 29
+
+++token 11: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 34
+
+++token 12: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 36
+
+++token 13: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 3
+start index: 41
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 43
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 45
+
+++token 16: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 48
+
+++token 17: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 50
+
+++token 18: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 55
+
+++token 19: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 58
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: ggg
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: true
+**Filling tab op: add line 3: ||
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: bbb
+**Filling tab op: add line 5: &&
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+**Filling tab op: add line 7: ||
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: zzz
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 3
+
+++token 2: value: ggg, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 8
+
+**get cmd: echo
+
+**get cmd: ggg
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: true, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 15
+
+**get cmd: true
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (echo aaa && echo bbb && (echo zzz | echo iii)) && echo$?
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 3: value: aaa, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+++token 4: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 11
+
+++token 5: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 13
+
+++token 6: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 18
+
+++token 7: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 23
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 25
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 26
+
+++token 10: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 31
+
+++token 11: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 35
+
+++token 12: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 37
+
+++token 13: value: iii, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 42
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 45
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 46
+
+++token 16: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 49
+
+++token 17: value: echo0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 51
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: aaa
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: echo
+**Filling tab: add line 2: bbb
+**Filling tab op: add line 3: &&
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: zzz
+**Filling tab op: add line 5: |
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: iii
+**Filling tab op: add line 7: &&
+**Filling tab: add line 8: echo0
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 2: value: aaa, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+**get cmd: echo
+
+**get cmd: aaa
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 13
+
+++token 2: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 18
+
+**get cmd: echo
+
+**get cmd: bbb
+
+last-g_status **: 0
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 26
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 31
+
+**  tab-line 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 37
+
+++token 2: value: iii, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 42
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+----------pre before close: 5
+
+**get cmd: echo
+
+**get cmd: zzz
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 2
+start index: 26
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: zzz par_n: 2
+start index: 31
+
+**get cmd: echo
+
+**get cmd: iii
+
+---fill last cmd, line 6: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 2
+start index: 37
+
+++token 2: value: iii, type: 0
+   in: 0, out: 1 cmd: iii par_n: 2
+start index: 42
+
+last-g_status **: 0
+----------pre before close: 5
+
+**start fill simple cmd_array
+
+**  tab-line 8 after REREAD:
+  
+++token 1: value: echo0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 51
+
+**get cmd: echo0
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: (echo aaa && echo bbb && (echo zzz | echo iii)) && echo $?
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 3: value: aaa, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+++token 4: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 11
+
+++token 5: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 13
+
+++token 6: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 18
+
+++token 7: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 23
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 25
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 26
+
+++token 10: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 31
+
+++token 11: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 35
+
+++token 12: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 37
+
+++token 13: value: iii, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 42
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 45
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 46
+
+++token 16: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 49
+
+++token 17: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 51
+
+++token 18: value: 127, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 56
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: aaa
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: echo
+**Filling tab: add line 2: bbb
+**Filling tab op: add line 3: &&
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: zzz
+**Filling tab op: add line 5: |
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: iii
+**Filling tab op: add line 7: &&
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: 127
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 2: value: aaa, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+**get cmd: echo
+
+**get cmd: aaa
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 13
+
+++token 2: value: bbb, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 18
+
+**get cmd: echo
+
+**get cmd: bbb
+
+last-g_status **: 0
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 26
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 31
+
+**  tab-line 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 37
+
+++token 2: value: iii, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 42
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+
+**get cmd: echo
+
+**get cmd: zzz
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 2
+start index: 26
+
+++token 2: value: zzz, type: 0
+   in: 0, out: 1 cmd: zzz par_n: 2
+start index: 31
+----------pre before close: 5
+
+**get cmd: echo
+
+**get cmd: iii
+
+---fill last cmd, line 6: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 2
+start index: 37
+
+++token 2: value: iii, type: 0
+   in: 0, out: 1 cmd: iii par_n: 2
+start index: 42
+
+last-g_status **: 0
+----------pre before close: 5
+
+**start fill simple cmd_array
+
+**  tab-line 8 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 51
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 56
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: (echo test && false || echo$?)
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 3: value: test, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+++token 4: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 12
+
+++token 5: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 14
+
+++token 6: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 21
+
+++token 7: value: echo0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 23
+
+++token 8: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+*nb of unit: 3
+
+*Tab size: 5
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: test
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: false
+**Filling tab op: add line 3: ||
+**Filling tab: add line 4: echo0
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 2: value: test, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+**get cmd: echo
+
+**get cmd: test
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 14
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: echo1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 23
+
+**get cmd: echo1
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: (echo aaa3 && echo bb3b && (echo z3zz | grep 3)) && echo $?
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 0
+
+++token 2: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 3: value: aaa3, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+++token 4: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 12
+
+++token 5: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 14
+
+++token 6: value: bb3b, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+++token 7: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 25
+
+++token 8: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 27
+
+++token 9: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 28
+
+++token 10: value: z3zz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 33
+
+++token 11: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 38
+
+++token 12: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 40
+
+++token 13: value: 3, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 45
+
+++token 14: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 46
+
+++token 15: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 47
+
+++token 16: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 50
+
+++token 17: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 52
+
+++token 18: value: 127, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 57
+
+*nb of unit: 5
+
+*Tab size: 9
+**Filling tab: add line 0: echo
+**Filling tab: add line 0: aaa3
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: echo
+**Filling tab: add line 2: bb3b
+**Filling tab op: add line 3: &&
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: z3zz
+**Filling tab op: add line 5: |
+**Filling tab: add line 6: grep
+**Filling tab: add line 6: 3
+**Filling tab op: add line 7: &&
+**Filling tab: add line 8: echo
+**Filling tab: add line 8: 127
+
+Until line 9, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 1
+
+++token 2: value: aaa3, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 6
+
+**get cmd: echo
+
+**get cmd: aaa3
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 14
+
+++token 2: value: bb3b, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+**get cmd: echo
+
+**get cmd: bb3b
+
+last-g_status **: 0
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 28
+
+++token 2: value: z3zz, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 33
+
+**  tab-line 6 after REREAD:
+  
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 40
+
+++token 2: value: 3, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 2
+start index: 45
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+----------pre before close: 5
+
+**get cmd: echo
+
+**get cmd: z3zz
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 2
+start index: 28
+
+++token 2: value: z3zz, type: 0
+   in: 0, out: 1 cmd: z3zz par_n: 2
+start index: 33
+
+**get cmd: grep
+
+**get cmd: 3
+
+---fill last cmd, line 6: 
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: grep par_n: 2
+start index: 40
+
+++token 2: value: 3, type: 0
+   in: 0, out: 1 cmd: 3 par_n: 2
+start index: 45
+
+last-g_status **: 0
+----------pre before close: 5
+
+**start fill simple cmd_array
+
+**  tab-line 8 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 52
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 57
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export YY=IO && env | grep YY
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: YY=IO, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+++token 3: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 14
+
+++token 4: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 16
+
+++token 5: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 20
+
+++token 6: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 22
+
+++token 7: value: YY, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 27
+
+*nb of unit: 3
+
+*Tab size: 5
+**Filling tab: add line 0: export
+**Filling tab: add line 0: YY=IO
+**Filling tab op: add line 1: &&
+**Filling tab: add line 2: env
+**Filling tab op: add line 3: |
+**Filling tab: add line 4: grep
+**Filling tab: add line 4: YY
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: YY=IO, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+**get cmd: export
+
+**get cmd: YY=IO
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab-line 0 after REREAD:
+  
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: YY=IO, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+**get cmd: export
+
+**get cmd: YY=IO
+
+**  tab-line 2 after REREAD:
+  
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 16
+
+**  tab-line 4 after REREAD:
+  
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 22
+
+++token 2: value: YY, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 27
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+----------pre before close: 5
+
+**get cmd: env
+
+---fill child cmd: 
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: env par_n: 0
+start index: 16
+
+**get cmd: grep
+
+**get cmd: YY
+
+---fill last cmd, line 4: 
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: grep par_n: 0
+start index: 22
+
+++token 2: value: YY, type: 0
+   in: 0, out: 1 cmd: YY par_n: 0
+start index: 27
+
+last-g_status **: 0

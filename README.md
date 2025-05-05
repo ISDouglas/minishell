@@ -3,3 +3,5 @@ https://github.com/dansylvain/minishell_memo_tester/tree/d2747e04f8100151a47c96e
 rm -rf /home/layang/.var/app/com.visualstudio.code/cache/*
 
 rm -rf /home/layang/.var/app/com.visualstudio.code/data/vscode/extensions/*
+
+https://github.com/LucasKuhn/minishell_tester/tree/main

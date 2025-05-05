@@ -1,0 +1,1724 @@
+************ ************ ************
+
+**get input: ls
+
+..Got word before create token: ls
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : ls
+**Filling tab: add line 0: ls
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cd src && cd execution && ls *_bonus.c
+
+..Got word before create token: cd
+
+..Got word before create token: src
+
+..Got word before create token: cd
+
+..Got word before create token: execution
+
+..Got word before create token: ls
+
+..Got word before create token: *_bonus.c
+
+  .real glob location in word: { 100000000 }
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: src, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+++token 3: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 8
+
+++token 4: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 10
+
+++token 5: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 13
+
+++token 6: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 24
+
+++token 7: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 26
+
+++token 8: value: *_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+*nb of unit: 3
+
+*Tab size: 5
+* *PASS to token in while : cd
+**Filling tab: add line 0: cd
+**Filling tab: add line 0: src
+* *PASS to token in tab unit: &&
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 1: &&
+* *PASS to token in while : cd
+**Filling tab: add line 2: cd
+**Filling tab: add line 2: execution
+* *PASS to token in tab unit: &&
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 3: &&
+* *PASS to token in while : ls
+**Filling tab: add line 4: ls
+**Filling tab: add line 4: *_bonus.c
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: src, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: src
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: src, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: src
+
+**start fill simple cmd_array
+
+**  tab 2 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 10
+
+++token 2: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 13
+
+**get cmd: cd
+
+**get cmd: execution
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 2 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 10
+
+++token 2: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 13
+
+**get cmd: cd
+
+**get cmd: execution
+
+**start fill simple cmd_array
+
+  .real glob location in word: { 100000000 }
+
+**  tab 4 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 26
+
+++token 2: value: execute_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 3: value: execute_pipe_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 4: value: execute_built_in_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+**get cmd: ls
+
+**get cmd: execute_bonus.c
+
+**get cmd: execute_pipe_bonus.c
+
+**get cmd: execute_built_in_bonus.c
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cd ..
+
+..Got word before create token: cd
+
+..Got word before create token: ..
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: .., type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : cd
+**Filling tab: add line 0: cd
+**Filling tab: add line 0: ..
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: .., type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: ..
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: .., type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: ..
+************ ************ ************
+
+**get input: ls
+
+..Got word before create token: ls
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : ls
+**Filling tab: add line 0: ls
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cd execution && touch you_bonus.c && ls *_bonus.c
+
+..Got word before create token: cd
+
+..Got word before create token: execution
+
+..Got word before create token: touch
+
+..Got word before create token: you_bonus.c
+
+..Got word before create token: ls
+
+..Got word before create token: *_bonus.c
+
+  .real glob location in word: { 100000000 }
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+++token 3: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 14
+
+++token 4: value: touch, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 16
+
+++token 5: value: you_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 22
+
+++token 6: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 35
+
+++token 7: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 37
+
+++token 8: value: *_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 40
+
+*nb of unit: 3
+
+*Tab size: 5
+* *PASS to token in while : cd
+**Filling tab: add line 0: cd
+**Filling tab: add line 0: execution
+* *PASS to token in tab unit: &&
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 1: &&
+* *PASS to token in while : touch
+**Filling tab: add line 2: touch
+**Filling tab: add line 2: you_bonus.c
+* *PASS to token in tab unit: &&
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 3: &&
+* *PASS to token in while : ls
+**Filling tab: add line 4: ls
+**Filling tab: add line 4: *_bonus.c
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: execution
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cd, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: execution, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+**get cmd: cd
+
+**get cmd: execution
+
+**start fill simple cmd_array
+
+**  tab 2 after REREAD:
+  
+++token 1: value: touch, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 16
+
+++token 2: value: you_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 22
+
+**get cmd: touch
+
+**get cmd: you_bonus.c
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+  .real glob location in word: { 100000000 }
+
+**  tab 4 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 37
+
+++token 2: value: execute_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 40
+
+++token 3: value: execute_pipe_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 40
+
+++token 4: value: execute_built_in_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 40
+
+++token 5: value: you_bonus.c, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 40
+
+**get cmd: ls
+
+**get cmd: execute_bonus.c
+
+**get cmd: execute_pipe_bonus.c
+
+**get cmd: execute_built_in_bonus.c
+
+**get cmd: you_bonus.c
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: false || (false || echo $?) && echo $?
+
+..Got word before create token: false
+
+..Got word before create token: false
+
+..Got word before create token: echo
+
+..Got word before create token: 0
+
+..Got word before create token: echo
+
+..Got word before create token: 0
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+++token 3: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 9
+
+++token 4: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 10
+
+++token 5: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 17
+
+++token 6: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+++token 7: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 24
+
+++token 8: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 26
+
+++token 9: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 10: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 31
+
+++token 11: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 36
+
+*nb of unit: 4
+
+*Tab size: 7
+* *PASS to token in while : false
+**Filling tab: add line 0: false
+* *PASS to token in tab unit: ||
+* *PASS to token in while : ||
+* *PASS to token in op : ||
+**Filling tab op: add line 1: ||
+* *PASS to token in while : (
+* *PASS to token in while : false
+**Filling tab: add line 2: false
+* *PASS to token in tab unit: ||
+* *PASS to token in while : ||
+* *PASS to token in op : ||
+**Filling tab op: add line 3: ||
+* *PASS to token in while : echo
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: 0
+* *PASS to token in tab unit: )
+* *PASS to token in while : )
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 5: &&
+* *PASS to token in while : echo
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+
+Until line 7, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 10
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+++token 2: value: 1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 24
+
+**get cmd: echo
+
+**get cmd: 1
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 31
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 36
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: grep <<oo <<kk ip
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: oo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 5: value: kk, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 6: value: ip, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: kk
+
+**Filling tab: add line 0: ip
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**Here doc collected and saved
+
+**Here doc collected and saved
+
+**get cmd: grep
+
+**get cmd: ip
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: grep <<oo <<kk ip
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: oo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 5: value: kk, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 6: value: ip, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: kk
+
+**Filling tab: add line 0: ip
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**Here doc collected and saved
+
+**Here doc collected and saved
+
+**get cmd: grep
+
+**get cmd: ip
+
+last-g_status **: 1
+************ ************ ************
+
+**get input: grep <<oo <<kk ip
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: oo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 5: value: kk, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 6: value: ip, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: kk
+
+**Filling tab: add line 0: ip
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+[35;1mminishell[0m[0;33m$ [0m
+last-g_status **: 130
+************ ************ ************
+
+**get input: grep <<oo <<kk ip
+
+**add lexer succeed:
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: oo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 5: value: kk, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 6: value: ip, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: grep
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: oo
+
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: kk
+
+**Filling tab: add line 0: ip
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+[35;1mminishell[0m[0;33m$ [0m
+last-g_status **: 130
+************ ************ ************
+
+**get input: echi o || echo $? | cat
+
+..Got word before create token: echi
+
+..Got word before create token: o
+
+..Got word before create token: echo
+
+..Got word before create token: 0
+
+..Got word before create token: cat
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: echi, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 5
+
+++token 3: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 8
+
+++token 4: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 10
+
+++token 5: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+++token 6: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 18
+
+++token 7: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 20
+
+*nb of unit: 3
+
+*Tab size: 5
+* *PASS to token in while : echi
+**Filling tab: add line 0: echi
+**Filling tab: add line 0: o
+* *PASS to token in tab unit: ||
+* *PASS to token in while : ||
+* *PASS to token in op : ||
+**Filling tab op: add line 1: ||
+* *PASS to token in while : echo
+**Filling tab: add line 2: echo
+**Filling tab: add line 2: 0
+* *PASS to token in tab unit: |
+* *PASS to token in while : |
+* *PASS to token in op : |
+**Filling tab op: add line 3: |
+* *PASS to token in while : cat
+**Filling tab: add line 4: cat
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: echi, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 5
+
+**get cmd: echi
+
+**get cmd: o
+
+last-g_status **: 127
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+
+**get cmd: echo
+
+**get cmd: 0
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+----------pre before close: 5
+   in: 0, out: 1 cmd: echo par_n: 0
+start index: 10
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: 0 par_n: 0
+start index: 15
+
+**get cmd: cat
+
+---fill last cmd: 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat par_n: 0
+start index: 20
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: la > out
+
+**add lexer succeed:
+
+++token 1: value: la, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: la
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: out
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: la
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: ls > out
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: out
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cat out
+
+**add lexer succeed:
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 0: out
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: cat
+
+**get cmd: out
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cat out | echo niania | rev >> outfile
+
+..Got word before create token: cat
+
+..Got word before create token: out
+
+..Got word before create token: echo
+
+..Got word before create token: niania
+
+..Got word before create token: rev
+
+..Got word before create token: outfile
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+++token 3: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 8
+
+++token 4: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 10
+
+++token 5: value: niania, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 15
+
+++token 6: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 22
+
+++token 7: value: rev, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 24
+
+++token 8: value: >>, type: 5
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 9: value: outfile, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 31
+
+*nb of unit: 3
+
+*Tab size: 5
+* *PASS to token in while : cat
+**Filling tab: add line 0: cat
+**Filling tab: add line 0: out
+* *PASS to token in tab unit: |
+* *PASS to token in while : |
+* *PASS to token in op : |
+**Filling tab op: add line 1: |
+* *PASS to token in while : echo
+**Filling tab: add line 2: echo
+**Filling tab: add line 2: niania
+* *PASS to token in tab unit: |
+* *PASS to token in while : |
+* *PASS to token in op : |
+**Filling tab op: add line 3: |
+* *PASS to token in while : rev
+**Filling tab: add line 4: rev
+**Filling tab: add line 4: >>
+**Filling tab: add line 4: outfile
+
+Until line 5, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+----------pipe[1] before close: 6
+----------pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+
+   ##(pipe0: 6, pipe1: 7)##
+
+----------pre before close: 5
+**get cmd: cat
+----------pipe[1] before close: 7
+
+----------pre (before assign): 5 
+**get cmd: out
+
+---fill child cmd: 
+pre(after assign) = 6, pipe[0] = 6 
+
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: cat par_n: 0
+start index: 0
+
+++token 2: value: out, type: 0
+   in: 0, out: 1 cmd: out par_n: 0
+start index: 4
+----------pre before close: 6
+
+**get cmd: rev
+
+---fill last cmd: 
+
+++token 1: value: rev, type: 0
+   in: 0, out: 1 cmd: rev par_n: 0
+start index: 24
+
+++token 2: value: >>, type: 5
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 3: value: outfile, type: 0
+   in: 0, out: 5 cmd: (null) par_n: 0
+start index: 31
+
+**get cmd: echo
+
+**get cmd: niania
+
+---fill child cmd: 
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: echo par_n: 0
+start index: 10
+
+++token 2: value: niania, type: 0
+   in: 0, out: 1 cmd: niania par_n: 0
+start index: 15
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cat outfile 
+
+..Got word before create token: cat
+
+..Got word before create token: outfile
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: outfile, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : cat
+**Filling tab: add line 0: cat
+**Filling tab: add line 0: outfile
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: outfile, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+**get cmd: cat
+
+**get cmd: outfile
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: false || (false || echo $?) && echo $?
+
+..Got word before create token: false
+
+..Got word before create token: false
+
+..Got word before create token: echo
+
+..Got word before create token: 0
+
+..Got word before create token: echo
+
+..Got word before create token: 0
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 7
+
+++token 3: value: (, type: 8
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 9
+
+++token 4: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 10
+
+++token 5: value: ||, type: 7
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 17
+
+++token 6: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+++token 7: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 24
+
+++token 8: value: ), type: 9
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 26
+
+++token 9: value: &&, type: 6
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 29
+
+++token 10: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 31
+
+++token 11: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 36
+
+*nb of unit: 4
+
+*Tab size: 7
+* *PASS to token in while : false
+**Filling tab: add line 0: false
+* *PASS to token in tab unit: ||
+* *PASS to token in while : ||
+* *PASS to token in op : ||
+**Filling tab op: add line 1: ||
+* *PASS to token in while : (
+* *PASS to token in while : false
+**Filling tab: add line 2: false
+* *PASS to token in tab unit: ||
+* *PASS to token in while : ||
+* *PASS to token in op : ||
+**Filling tab op: add line 3: ||
+* *PASS to token in while : echo
+**Filling tab: add line 4: echo
+**Filling tab: add line 4: 0
+* *PASS to token in tab unit: )
+* *PASS to token in while : )
+* *PASS to token in while : &&
+* *PASS to token in op : &&
+**Filling tab op: add line 5: &&
+* *PASS to token in while : echo
+**Filling tab: add line 6: echo
+**Filling tab: add line 6: 0
+
+Until line 7, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab 2 after REREAD:
+  
+++token 1: value: false, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 10
+
+**get cmd: false
+
+last-g_status **: 1
+
+**start fill simple cmd_array
+
+**  tab 4 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 19
+
+++token 2: value: 1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 1
+start index: 24
+
+**get cmd: echo
+
+**get cmd: 1
+
+last-g_status **: 0
+
+**start fill simple cmd_array
+
+**  tab 6 after REREAD:
+  
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 31
+
+++token 2: value: 0, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 36
+
+**get cmd: echo
+
+**get cmd: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echi o
+
+**add lexer succeed:
+
+++token 1: value: echi, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echi
+
+**Filling tab: add line 0: o
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echi
+
+**get cmd: o
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: echo $?
+
+**add lexer succeed:
+
+++token 1: value: echo, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: 127, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echo
+
+**Filling tab: add line 0: 127
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echo
+
+**get cmd: 127
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: echi o
+
+**add lexer succeed:
+
+++token 1: value: echi, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: o, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: echi
+
+**Filling tab: add line 0: o
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: echi
+
+**get cmd: o
+
+last-g_status **: 127
+************ ************ ************
+
+**get input: expr $? + $?
+
+**add lexer succeed:
+
+++token 1: value: expr, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: 127, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: +, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: 127, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: expr
+
+**Filling tab: add line 0: 127
+
+**Filling tab: add line 0: +
+
+**Filling tab: add line 0: 127
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: expr
+
+**get cmd: 127
+
+**get cmd: +
+
+**get cmd: 127
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls > out
+
+**add lexer succeed:
+
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ls
+
+**Filling tab: add line 0: >
+
+**Filling tab: add line 0: out
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls > out
+
+..Got word before create token: ls
+
+..Got word before create token: out
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 5
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : ls
+**Filling tab: add line 0: ls
+**Filling tab: add line 0: >
+**Filling tab: add line 0: out
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 3
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 5
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ls >> out
+
+..Got word before create token: ls
+
+..Got word before create token: out
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >>, type: 5
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 6
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : ls
+**Filling tab: add line 0: ls
+**Filling tab: add line 0: >>
+**Filling tab: add line 0: out
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: ls, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: >>, type: 5
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+++token 3: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 6
+
+**get cmd: ls
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: cat out
+
+..Got word before create token: cat
+
+..Got word before create token: out
+
+**add lexer succeed:
+
+**  lexer after stamped:
+  
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+*nb of unit: 1
+
+*Tab size: 1
+* *PASS to token in while : cat
+**Filling tab: add line 0: cat
+**Filling tab: add line 0: out
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**  tab 0 after REREAD:
+  
+++token 1: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: out, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 4
+
+**get cmd: cat
+
+**get cmd: out
+
+last-g_status **: 0

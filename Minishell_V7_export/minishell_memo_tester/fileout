@@ -1,0 +1,65 @@
+************ ************ ************
+
+**get input: << end cat|>fileout 
+result after char: e
+result after char: en
+result after char: end
+result after char: c
+result after char: ca
+result after char: cat
+result after char: f
+result after char: fi
+result after char: fil
+result after char: file
+result after char: fileo
+result after char: fileou
+result after char: fileout
+
+**add lexer succeed:
+
+++token 1: value: <<, type: 4
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 2: value: end, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 3: value: cat, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 4: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 5: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 6: value: fileout, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: <<
+
+**Filling tab: add line 0: end
+
+**Filling tab: add line 0: cat
+
+**Filling tab: add line 1: >
+
+**Filling tab: add line 1: fileout
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 5, pipe1: 6)##
+          pipe[1] before close: 6
+pre (before assign): -1 
+pre(after assign) = 5, pipe[0] = 5 
+
+---fill last cmd: 
+
+++token 1: value: >, type: 3
+   in: 0, out: 1 cmd: (null) par_n: 0
+
+++token 2: value: fileout, type: 0
+   in: 0, out: 6 cmd: (null) par_n: 0

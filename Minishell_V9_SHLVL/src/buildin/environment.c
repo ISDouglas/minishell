@@ -6,7 +6,7 @@
 /*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 10:36:34 by nimorel           #+#    #+#             */
-/*   Updated: 2025/05/09 19:33:31 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/05/09 20:26:13 by nimorel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ static t_env	*ft_shlvl(char *value)
 	if (!new_lvl)
 		return (NULL);
 	node = ft_create_env_node("SHLVL", new_lvl);
-	free(new_lvl);
 	return (node);
 }
 

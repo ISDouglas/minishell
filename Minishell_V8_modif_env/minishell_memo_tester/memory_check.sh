@@ -4,7 +4,7 @@
 CURRENT_DIR=$(pwd)
 
 # Obtenir le chemin absolu de l'exécutable Minishell
-MINISHELL_EXECUTABLE=$(dirname "$CURRENT_DIR")/minishell_bonus
+MINISHELL_EXECUTABLE=$(dirname "$CURRENT_DIR")/minishell
 
 # Vérifier si l'exécutable Minishell est présent et exécutable
 if [ ! -f "$MINISHELL_EXECUTABLE" ] || [ ! -x "$MINISHELL_EXECUTABLE" ]; then

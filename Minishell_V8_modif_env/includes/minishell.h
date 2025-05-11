@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nimorel <nimorel <marvin@42.fr> >          +#+  +:+       +#+        */
+/*   By: layang <layang@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 09:39:53 by nimorel           #+#    #+#             */
-/*   Updated: 2025/05/08 11:27:47 by nimorel          ###   ########.fr       */
+/*   Updated: 2025/05/09 08:55:10 by layang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,41 @@
 # define MINISHELL_H
 
 /* 
-For V7:
-in mandatory, modify based on V6_2:
-do the buildin single before not after.
+For V8_5_2:
+#include <stdio.h>
+#include <sys/stat.h>
+#include <unistd.h>
 
-change the 	int	*cpid; into	pid_t	*cpid.
+void check_path_type(const char *path)
+{
+    struct stat path_stat;
 
-add else in ft_handle_child.
+    if (access(path, F_OK) != 0)
+    {
+        printf("路径不存在：%s\n", path);
+        return;
+    }
 
-in bonus:
-add t_env **sub_env and int	layer;
+    if (stat(path, &path_stat) != 0)
+    {
+        perror("无法获取文件信息");
+        return;
+    }
+
+    if (S_ISDIR(path_stat.st_mode))
+        printf("是一个目录（Directory）\n");
+    else if (S_ISREG(path_stat.st_mode))
+    {
+        printf("是一个普通文件（Regular file）\n");
+        if (access(path, X_OK) == 0)
+            printf("它是一个可执行文件（Executable binary）\n");
+        else
+            printf("但它不是可执行文件\n");
+    }
+    else
+        printf("既不是普通文件也不是目录\n");
+}
+
 
 */
 
@@ -42,7 +67,7 @@ add t_env **sub_env and int	layer;
 # include <string.h>
 # include "../Libft/libft.h"
 # include <limits.h>
-//# include <wait.h>
+# include <wait.h>
 
 /*****************************************************************************
  *  

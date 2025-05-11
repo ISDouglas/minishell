@@ -1280,3 +1280,583 @@ start index: 0
 Until line 1, finish fill_tab. Executing>>>>-------
 
 >>> layer is : 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ./minishell
+
+**add lexer succeed:
+
+++token 1: value: ./minishell, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./minishell
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ./minishell
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export SHLVL=-1
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: SHLVL=-1, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: SHLVL=-1
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: SHLVL=-1
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ./minishell
+
+**add lexer succeed:
+
+++token 1: value: ./minishell, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./minishell
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ./minishell
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export SHLVL=a
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: SHLVL=a, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: SHLVL=a
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: SHLVL=a
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: ./minishell
+
+**add lexer succeed:
+
+++token 1: value: ./minishell, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: ./minishell
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: ./minishell
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export ET=yyyyyy
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ET=yyyyyy, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: ET=yyyyyy
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: ET=yyyyyy
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+************ ************ ************
+
+**get input: export ET=
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ET=, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: ET=
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: ET=
+************ ************ ************
+
+**get input: env
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: env
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: env
+
+last-g_status **: 0
+************ ************ ************
+
+**get input: export ET
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ET, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: ET
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: ET
+************ ************ ************
+
+**get input: export
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+************ ************ ************
+
+**get input: unset ET
+
+**add lexer succeed:
+
+++token 1: value: unset, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: ET, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: unset
+
+**Filling tab: add line 0: ET
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: unset
+
+**get cmd: ET
+************ ************ ************
+
+**get input: export TTTT
+
+**add lexer succeed:
+
+++token 1: value: export, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: TTTT, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 1
+
+*Tab size: 1
+**Filling tab: add line 0: export
+
+**Filling tab: add line 0: TTTT
+
+
+Until line 1, finish fill_tab. Executing>>>>-------
+
+**start fill simple cmd_array
+
+**get cmd: export
+
+**get cmd: TTTT
+************ ************ ************
+
+**get input: env | grep TTTT
+
+**add lexer succeed:
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 2: value: |, type: 1
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 3: value: grep, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+++token 4: value: TTTT, type: 0
+   in: 0, out: 1 cmd: (null) par_n: 0
+start index: 0
+
+*nb of unit: 2
+
+*Tab size: 2
+**Filling tab: add line 0: env
+
+**Filling tab: add line 1: grep
+
+**Filling tab: add line 1: TTTT
+
+
+Until line 2, finish fill_tab. Executing>>>>-------
+
+   ##(pipe0: 7, pipe1: 8)##
+          pipe[1] before close: 8
+pre (before assign): -1 
+pre(after assign) = 7, pipe[0] = 7 
+
+**get cmd: env
+
+---fill child cmd: 
+
+++token 1: value: env, type: 0
+   in: 0, out: 1 cmd: env par_n: 0
+start index: 0
+          pre before close: 7
+
+**get cmd: grep
+
+**get cmd: TTTT
+
+---fill last cmd: 
+
+++token 1: value: grep, type: 0
+   in: 0, out: 1 cmd: grep par_n: 0
+start index: 0
+
+++token 2: value: TTTT, type: 0
+   in: 0, out: 1 cmd: TTTT par_n: 0
+start index: 0
+
+last-g_status **: 0

@@ -11,7 +11,7 @@
 
 <h4 align="right">
 	
-  🧑🏻‍💻👩🏻‍💻 Made by [@yourname](https://github.com/yourname) and [@partner](https://github.com/partner)
+  🧑🏻‍💻👩🏻‍💻 Made by [@ISDouglas](https://github.com/ISDouglas) and [@Nmorel-66](https://github.com/Nmorel-66)
 
 </h4>
 
@@ -87,4 +87,4 @@ and environment variable handling — all implemented **from scratch**.
 ```bash
 git clone https://github.com/yourname/42cursus-minishell.git
 cd minishell
-make
+make bonus

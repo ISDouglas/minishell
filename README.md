@@ -85,6 +85,6 @@ and environment variable handling — all implemented **from scratch**.
 ### 🔧 Installation
 
 ```bash
-git clone https://github.com/yourname/42cursus-minishell.git
+git clone git@github.com:ISDouglas/minishell.git
 cd minishell
 make bonus
